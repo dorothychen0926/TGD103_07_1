@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="css/layout.css" />
+
+    <title>Partner Clothing 服裝人才媒合平台</title>
+    <link rel="icon" href="/img/ico.ico" type="image/x-icon" />
+  </head>
+  <body id="body">
+    <!-----------共用 表頭 開始---------->
+
+    <header class="max-w_block">
+      <h1><a class="logo" href="index.html">服裝人才媒合平台</a></h1>
+      <nav class="menu">
+        <ul class="nav">
+          <!-- 找人才pc版 -->
+          <li class="talent_pc">
+            <a href="talent.html">找人才</a>
+
+            <!-- -------子選單------- -->
+            <ol class="orderlist nowpage">
+              <li><a href="talent.html">服裝設計</a></li>
+              <li><a href="talent.html">打版立裁</a></li>
+              <li><a href="talent.html">樣本製作</a></li>
+              <li><a href="talent.html">設備購買</a></li>
+              <li><a href="talent.html">電腦放縮</a></li>
+              <li><a href="talent.html">輔料素材</a></li>
+              <li><a href="talent.html">布料</a></li>
+              <li><a href="talent.html">轉讓租借</a></li>
+            </ol>
+          </li>
+          <!-- 找人才rwd版 -->
+          <li class="talent_rwd">
+            <a href="talent.html">找人才</a>
+            <!-- -------子選單------- -->
+            <ol class="orderlist_rwd nowpage">
+              <li><a href="talent.html">其它搜尋</a></li>
+              <li><a href="talent.html">服裝設計</a></li>
+              <li><a href="talent.html">打版立裁</a></li>
+              <li><a href="talent.html">樣本製作</a></li>
+              <li><a href="talent.html">設備購買</a></li>
+              <li><a href="talent.html">電腦放縮</a></li>
+              <li><a href="talent.html">輔料素材</a></li>
+              <li><a href="talent.html">布料</a></li>
+              <li><a href="talent.html">轉讓租借</a></li>
+            </ol>
+          </li>
+          <!-- 找案件pc版 -->
+          <li class="case_pc">
+            <a href="case.html">找案件</a>
+            <!-- -------子選單------- -->
+            <ol class="orderlist nowpage">
+              <li><a href="case.html">服裝設計</a></li>
+              <li><a href="case.html">打版立裁</a></li>
+              <li><a href="case.html">樣本製作</a></li>
+              <li><a href="case.html">設備購買</a></li>
+              <li><a href="case.html">電腦放縮</a></li>
+              <li><a href="case.html">輔料素材</a></li>
+              <li><a href="case.html">布料</a></li>
+              <li><a href="case.html">轉讓租借</a></li>
+            </ol>
+          </li>
+          <!-- 找案件rwd版 -->
+          <li class="case_rwd">
+            <a href="case.html">找案件</a>
+            <!-- -------子選單------- -->
+            <ol class="orderlist_rwd nowpage">
+              <li><a href="case.html">其它搜尋</a></li>
+              <li><a href="case.html">服裝設計</a></li>
+              <li><a href="case.html">打版立裁</a></li>
+              <li><a href="case.html">樣本製作</a></li>
+              <li><a href="case.html">設備購買</a></li>
+              <li><a href="case.html">電腦放縮</a></li>
+              <li><a href="case.html">輔料素材</a></li>
+              <li><a href="case.html">布料</a></li>
+              <li><a href="case.html">轉讓租借</a></li>
+            </ol>
+          </li>
+
+          <li><a href="how_take_case.html">如何接案</a></li>
+          <li><a href="case_publication.html">案件刊登</a></li>
+        </ul>
+        <ul class="member">
+          <li><a href="#" class="loign" id="login">登入</a></li>
+          <li><a href="#" class="register" id="register">註冊</a></li>
+        </ul>
+      </nav>
+
+      <button id="hamburger">
+        <span class="material-symbols-outlined hamburger_expand" id=""
+          >menu</span
+        >
+        <span
+          class="material-symbols-outlined display_none hamburger_close"
+          id=""
+          >close</span
+        >
+      </button>
+    </header>
+
+    <!-----------共用 表頭 結束---------->
+
+    <!-- ---------- dialog 註冊開始 ---------- -->
+    <div class="DivOverlapMask hidden"></div>
+    <div class="regi_DivDialog font_14px hidden">
+      <!-- 關閉按鈕 -->
+      <button class="closeDialog">
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+
+      <!-- 表單 -->
+      <!-- logo -->
+      <div class="DivDialog_logo"></div>
+      <!-- 社群登入 -->
+      <div class="socialAuthLinks">
+        <a class="social" href="#">
+          <div class="social_logo facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <span>Facebook</span>
+        </a>
+        <a class="social" href="#">
+          <div class="social_logo google">
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <span>Google</span>
+        </a>
+      </div>
+      <!-- 分隔線 -->
+      <div class="divider font_12px">
+        <span>或</span>
+      </div>
+      <!-- 輸入框姓名 -->
+      <div class="inputText_wrapper">
+        <label for="name">
+          <span class="material-symbols-outlined"> person </span>
+
+          <input
+            type="text"
+            name="name"
+            id="regi_name"
+            placeholder="姓名"
+            autocomplete="on"
+            class="font_14px"
+          />
+        </label>
+      </div>
+      <!-- 輸入框email -->
+      <div class="inputText_wrapper">
+        <label for="email">
+          <span class="material-symbols-outlined"> mail </span>
+          <input
+            type="email"
+            name="email"
+            id="regi_email"
+            placeholder="電子郵件"
+            autocomplete="on"
+            class="font_14px"
+          />
+        </label>
+      </div>
+      <!-- 輸入框密碼 -->
+      <div class="inputText_wrapper">
+        <label for="password">
+          <span class="material-symbols-outlined"> key </span>
+          <input
+            type="password"
+            name="password"
+            id="regi_password"
+            placeholder="密碼"
+            maxlength="12"
+            class="font_14px"
+          />
+
+          <button id="regi_show_password" onclick="regi_passwordToggle()">
+            <span class="material-symbols-outlined off">
+            visibility_off
+        </span>
+            <span class="material-symbols-outlined on"> visibility </span>
+          </button>
+        </label>
+      </div>
+      <!-- 勾選是否訂閱 -->
+      <div class="subscribe">
+        <input type="checkbox" name="subscribe" id="subscribe" />
+        <label for="subscribe">我想訂閱電子報與獲得最新情報</label>
+      </div>
+      <!-- 送出 -->
+      <input class="submit" type="submit" value="註冊" />
+
+      <!-- 表尾 -->
+      <p class="terms font_12px">
+        註冊帳號即表示您同意我們的<a href="#">服務條款</a>及<a href="#"
+          >隱私政策</a
+        >
+      </p>
+      <div class="switch_identity">
+        <p>已是會員?</p>
+        <a href="#" id="switch_login">登入</a>
+      </div>
+    </div>
+
+    <!-- ---------- dialog 註冊結束 ---------- -->
+
+    <!-- ---------- dialog 登入開始 ---------- -->
+    <div class="login_DivDialog font_14px hidden">
+      <!-- 關閉按鈕 -->
+      <button class="closeDialog">
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+
+      <!-- 表單 -->
+      <!-- logo -->
+      <div class="DivDialog_logo"></div>
+      <!-- 社群登入 -->
+      <div class="socialAuthLinks">
+        <a class="social" href="#">
+          <div class="social_logo facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <span>Facebook</span>
+        </a>
+        <a class="social" href="#">
+          <div class="social_logo google">
+            <i class="fa-brands fa-google"></i>
+          </div>
+          <span>Google</span>
+        </a>
+      </div>
+      <!-- 分隔線 -->
+      <div class="divider font_12px">
+        <span>或</span>
+      </div>
+      <!-- 輸入框email -->
+      <div class="inputText_wrapper">
+        <label for="email">
+          <span class="material-symbols-outlined"> mail </span>
+          <input
+            type="email"
+            name="email"
+            id="login_email"
+            placeholder="電子郵件"
+            autocomplete="on"
+            class="font_14px"
+          />
+        </label>
+      </div>
+      <!-- 輸入框密碼 -->
+      <div class="inputText_wrapper">
+        <label for="password">
+          <span class="material-symbols-outlined"> key </span>
+          <input
+            type="password"
+            name="password"
+            id="login_password"
+            placeholder="密碼"
+            maxlength="12"
+            class="font_14px"
+          />
+
+          <button id="login_show_password" onclick="logi_passwordToggle()">
+            <span class="material-symbols-outlined off">
+              visibility_off
+          </span>
+            <span class="material-symbols-outlined on"> visibility </span>
+          </button>
+        </label>
+      </div>
+      <!-- 自動登入%忘記密碼 -->
+      <div class="autoLogin_forget">
+        <div class="autoLogin">
+          <input type="checkbox" name="autoLogin" id="autoLogin" />
+          <label for="autoLogin">自動登入</label>
+        </div>
+
+        <a href="#">忘記密碼</a>
+      </div>
+
+      <!-- 送出 -->
+      <input class="submit" type="submit" value="登入" />
+
+      <!-- 表尾 -->
+
+      <div class="switch_identity">
+        <p>還沒有帳號嗎?</p>
+        <a href="#" id="switch_register">註冊</a>
+      </div>
+    </div>
+
+    <!-- ---------- dialog 登入結束 ---------- -->
+
+    <script src="js/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="css/talent.css" />
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    
+    <!-- 標題icon -->
+    <link rel="icon" href="img/ico.ico" type="image/x-icon" />
+
+    <title>Partner Clothing 服裝人才媒合平台</title>
+
+    <!-- HTML引用公共佈局 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- 台灣縣市鄉鎮選擇器(tw-city-selector.js)，也需要引用上一排的jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js"></script>
+  </head>
+
+  <body id="">
+    <!----------- 引用公共佈局 ---------->
+    <div id="header"></div>
+
+    <!----------- 找人才_banner ---------->
+
+    <section class="talent_banner">
+      <div class="wrap">
+        <h2 class="font_banner">找到適合的人才與報價</h2>
+        <h2 class="font_banner tb2">填寫需求 完全免費</h2>
+        <a class="font_banner_button ad_button" href="case_publication.html">立即刊登</a>
+      </div>
+    </section>
+
+  <!----------- 找人才_icon ---------->
+  <section class="talent_item main_block2">
+    <h3  onclick="icon_change(0)"><p class="font_bold  design">
+      服裝設計</p>
+      <span class="font_14px">(387)筆</span>
+    </h3>
+    <h3  onclick="icon_change(1)"><p class="font_bold  patternMake">
+      打版立裁</p>
+      <span class="font_14px">(521)筆</span>
+    </h3>
+    <h3  onclick="icon_change(2)"><p class="font_bold  sample">
+      樣本製作</p>
+      <span class="font_14px">(667)筆</span>
+    </h3>
+    <h3  onclick="icon_change(3)"><p class="font_bold  equipment">
+      設備購買</p>
+      <span class="font_14px">(48)筆</span>
+    </h3>
+    <h3  onclick="icon_change(4)"><p class="font_bold  Computer">
+      電腦放縮</p>
+      <span class="font_14px">(599)筆</span>
+    </h3>
+    <h3  onclick="icon_change(5)"><p class="font_bold  material">
+      輔料素材</p>
+      <span class="font_14px">(200)筆</span>
+    </h3>
+    <h3  onclick="icon_change(6)"><p class="font_bold  fabric">
+      織品布料</p>
+      <span class="font_14px">(76)筆</span>
+    </h3>
+    <h3  onclick="icon_change(7)"><p class="font_bold under-lease">
+      轉讓租借</p>
+      <span class="font_14px">(312)筆</span>
+    </h3>
+  </section>
+
+
+    <!----------- 找人才_搜尋與結果 ---------->
+
+    <div class="talent_wrapper main_block2">
+
+
+      <!-- 左邊側欄 -->
+
+    <aside class="talent_aside">
+
+      <!-- 搜尋吧 -->
+      <div class="search-bar-div">
+        <input
+          class="search-bar"
+          type="search"
+          name="search-bar"
+          id="search-bar"
+          placeholder="您想要找什麼人才?"
+        />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      
+      <!-- 搜尋條件 -->
+      <p class="class font_20px">打版立裁</p>
+      <dl>
+      
+        <!-- 專長 -->
+
+        <dt>專長<i class="fa-solid fa-angle-down"></i></dt>
+        <div class="dt_div">
+
+          <dd><input type="checkbox" name="specialist" id="patternMake" />
+            <label for="patternMake">手繪打版</label></dd>
+
+          <dd><input type="checkbox" name="specialist" id="patternMake_bySoftware" />
+            <label for="patternMake_bySoftware">電腦打版</label></dd>
+
+          <dd><input type="checkbox" name="specialist" id="draping" />
+            <label for="draping">立體裁剪</label></dd>
+            
+          <dd><input type="checkbox" name="specialist" id="Modify" />
+            <label for="Modify">修改版型</label></dd>
+
+          <dd><input type="checkbox" name="specialist" id="customized" />
+            <label for="customized">訂製服</label></dd>
+
+          <dd><input type="checkbox" name="specialist" id="suit_customization" />
+              <label for="suit_customization">西裝訂製</label></dd>          
+
+
+        </div>
+        <!-- 地點 -->
+        <dt>地點</dt>
+        <div class="dt_div">
+          <dd>
+            <!-- 縣市選擇器 設置一個空 element tag -->
+            <div role="tw-city-selector" class="my-style-selector">
+            </div>
+        </dd>
+      </div>
+
+        <!--身份-->
+        <dt>身份<i class="fa-solid fa-angle-down"></i></dt>
+        <div class="dt_div">
+          <dd><input type="checkbox" name="identity" id="company" />
+            <label for="company">公司</label> </dd>
+
+        <dd><input type="checkbox" name="identity" id="studio" />
+          <label for="studio">工作室</label></dd>
+
+        <dd><input type="checkbox" name="identity" id="SOHO" />
+          <label for="SOHO">專職SOHO</label></dd>
+
+        <dd><input type="checkbox" name="identity" id="part-time" />
+          <label for="part-time">個人兼職</label></dd>
+
+        <dd><input type="checkbox" name="identity" id="student" />
+          <label for="student">學生</label></dd>
+        </div>
+        
+        <!--經歷-->
+        <dt>經歷<i class="fa-solid fa-angle-down"></i></dt>
+        <div class="dt_div">
+          <dd><input type="radio" name="experience" id="under1year" />
+            <label for="under1year">1年以下</label></dd>
+
+          <dd><input type="radio" name="experience" id="MoreThan1Year" />
+            <label for="MoreThan1Year">1年以上</label></dd>
+            
+
+          <dd><input type="radio" name="experience" id="MoreThan2Year" />
+            <label for="MoreThan2Year">2年以上</label></dd>
+            
+
+          <dd><input type="radio" name="experience" id="MoreThan3Year" />
+            <label for="MoreThan3Year">3年以上</label></dd>
+            
+
+          <dd><input type="radio" name="experience" id="MoreThan5Year" />
+            <label for="MoreThan5Year">5年以上</label></dd>
+
+            
+            
+
+          <dd><input type="radio" name="experience" id="MoreThan10Year" />
+            <label for="MoreThan10Year">10年以上</label></dd>
+
+        </div>
+      </dl>
+
+    </aside>
+
+      <!-- 右邊搜尋結果 -->
+      <article class="talent_article">
+        <!-- 麵包屑 -->
+        <ol class="breadcrumb">
+          <li><a href="talent.html">找人才</a></li>
+          <li><a href="talent.html">打版立裁</a></li>
+        </ol>
+
+        <!-- 筆數與排序 -->
+        <div class="talent_div">
+          <span class="number">搜尋結果：共2,521人</span>
+          <div class="sorting">
+            <button class="font_14px">
+              評分等級<i class="fa-solid fa-arrow-down"></i>
+            </button>
+            <button class="font_14px">
+              作品數<i class="fa-solid fa-arrow-down"></i>
+            </button>
+            <button class="font_14px">
+              更新時間<i class="fa-solid fa-arrow-down"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 搜尋結果 -->
+
+        <div class="result">
+
+          <!------------- 第一排第一個------------ -->
+          <ul class="portfolio">
+            <!-- 1.照片 -->
+            <li class="portfolio_img">
+              <a href="#"><img src="img/talnet/portfolio_img1.jpg" alt="avatar1"
+                /></a>
+              <!-- 看過的產生遮罩 -->
+              <div class="portfolio_img_mask">
+                <span class="font_14px">已看過</span>
+              </div>
+            </li>
+            <!-- 2.個人檔案包裏 -->
+            <li class="Info_wrapper">
+              <!-- 個人檔案 -->
+              <div class="Info">
+                <div class="avatar">
+                  <img src="img/talnet/talent_avatar1.png" alt="avatar1" />
+                </div>
+                <div class="editor">
+                  <h5 class="font_bold "><a href="#">蘇飛欣版型工作室</a></h5>
+                  <div class="font_12px">VIP</div>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  
+                </div>
+              </div>
+              <!-- 專長 -->
+              <div class="special">
+                <!-- 偽元素塞入專長 -->
+                <a class="font_14px" href="#">#手繪打版</a>
+                <a class="font_14px" href="#">樣本</a>
+                <a class="font_14px" href="#">#電腦打版</a>
+                <a class="font_14px" href="#">#立裁</a>
+              </div>
+              <!-- 成就 -->
+              <div class="achievement">
+                <span>作品：43</span>
+                <span>成交：17</span>
+              </div>
+              <!-- 地點 -->
+              <div class="area">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>新北市新莊區</span>
+              </div>
+            </li>
+
+            <!--3.看更多 -->
+            <li class="more">
+              <a href="#"
+                >看更多 <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+          <!------------- 第一排第二個------------ -->
+          <ul class="portfolio">
+            <!-- 1.照片 -->
+            <li class="portfolio_img">
+              <a href="#">
+                <img src="img/talnet/portfolio_img2.jpg" alt="avatar1"
+              />
+              <!-- 看過的產生遮罩 -->
+              <div class="portfolio_img_mask">
+                <span class="font_14px">已看過</span>
+              </div>
+            </li>        
+            <!-- 2.個人檔案包裏 -->
+            <li class="Info_wrapper">
+              <!-- 個人檔案 -->
+              <div class="Info">
+                <div class="avatar">
+                  <img src="img/talnet/talent_avatar2.png" alt="avatar1" />
+                </div>
+                <div class="editor">
+                  <h5 class="font_bold "><a href="#">金星個人訂作</a></h5>
+                  <div class="font_12px">VIP</div>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                </div>
+              </div>
+              <!-- 專長 -->
+              <div class="special">
+                <!-- 偽元素塞入"專長" -->
+                <a class="font_14px" href="#">#立體裁剪</a>
+                <a class="font_14px" href="#">#訂製服</a>
+                <a class="font_14px" href="#">#通告服</a>
+                <a class="font_14px" href="#">#手繪打版</a>
+              </div>
+              <!-- 成就 -->
+              <div class="achievement">
+                <span>作品：209</span>
+                <span>成交：117</span>
+              </div>
+              <!-- 地點 -->
+              <div class="area">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>新北市板橋區</span>
+              </div>
+            </li>
+            <!--3.看更多 -->
+            <li class="more">
+              <a href="#"
+                >看更多 <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+          <!------------- 第一排第三個------------ -->
+          <ul class="portfolio">
+            <!-- 1.照片 -->
+            <li class="portfolio_img">
+              <a href="#"><img src="img/talnet/portfolio_img3.jpg" alt="avatar1"
+              />
+              <!-- 看過的產生遮罩 -->
+              <div class="portfolio_img_mask">
+                <span class="font_14px">已看過</span>
+              </div>
+
+
+            </li>
+            <!-- 2.個人檔案包裏 -->
+            <li class="Info_wrapper">
+              <!-- 個人檔案 -->
+              <div class="Info">
+                <div class="avatar">
+                  <img src="img/talnet/talent_avatar3.png" alt="avatar1" />
+                </div>
+                <div class="editor">
+                  <h5 class="font_bold "><a href="#">黃日簡</a></h5>
+                  <div class="font_12px">VIP</div>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+
+                </div>
+              </div>
+              <!-- 專長 -->
+              <div class="special">
+                <!-- 偽元素塞入專長 -->
+                <a class="font_14px" href="#">#手繪打版</a>
+                <a class="font_14px" href="#">#西裝訂製</a>
+                <a class="font_14px" href="#">#修改版型</a>
+              </div>
+              <!-- 成就 -->
+              <div class="achievement">
+                <span>作品：20</span>
+                <span>成交：8</span>
+              </div>
+              <!-- 地點 -->
+              <div class="area">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>台北市大同區</span>
+              </div>
+            </li>
+            <!--3.看更多 -->
+            <li class="more">
+              <a href="#"
+                >看更多 <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+
+          <!------------- 第二排第一個------------ -->
+          <ul class="portfolio">
+            <!-- 1.照片 -->
+            <li class="portfolio_img">
+              <a href="#"><img src="img/talnet/portfolio_img4.jpg" alt="avatar1"
+              />
+            <!-- 看過的產生遮罩 -->
+            <div class="portfolio_img_mask">
+              <span class="font_14px">已看過</span>
+            </div>
+            </a>
+              
+            </li>
+
+            <!-- 2.個人檔案包裏 -->
+            <li class="Info_wrapper">
+              <!-- 個人檔案 -->
+              <div class="Info">
+                <div class="avatar">
+                  <img src="img/talnet/talent_avatar4.png" alt="avatar1" />
+                </div>
+                <div class="editor">
+                  <h5 class="font_bold "><a href="#">王珊珊</a></h5>
+                  <div class="font_12px">VIP</div>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  
+                </div>
+              </div>
+              <!-- 專長 -->
+              <div class="special">
+                <!-- 偽元素塞入專長 -->
+                <a class="font_14px" href="#">#立體裁剪</a>
+                <a class="font_14px" href="#">#樣本</a>
+                <a class="font_14px" href="#">#手繪打版</a>
+              </div>
+              <!-- 成就 -->
+              <div class="achievement">
+                <span>作品：40</span>
+                <span>成交：32</span>
+              </div>           
+              <!-- 地點 -->
+              <div class="area">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>桃園市平鎮區</span>
+              </div>
+          </li>
+
+            <!--3.看更多 -->
+            <li class="more">
+              <a href="#"
+                >看更多 <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+          <!------------- 第二排第二個------------ -->
+          <ul class="portfolio">
+            <!-- 1.照片 -->
+            <li class="portfolio_img">
+              <a href="#"><img src="img/talnet/portfolio_img5.jpg" alt="avatar1"
+              />
+              <!-- 看過的產生遮罩 -->
+              <div class="portfolio_img_mask">
+                <span class="font_14px">已看過</span>
+              </div>
+            </a>
+
+
+            </li>
+
+            <!-- 2.個人檔案包裏 -->
+            <li class="Info_wrapper">
+              <!-- 個人檔案 -->
+              <div class="Info">
+                <div class="avatar">
+                  <img src="img/talnet/talent_avatar5.png" alt="avatar1" />
+                </div>
+                <div class="editor">
+                  <h5 class="font_bold "><a href="#">daylight 日光</a></h5>
+                  <div class="font_12px">VIP</div>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+ 
+                </div>
+              </div>
+              <!-- 專長 -->
+              <div class="special">
+                <!-- 偽元素塞入專長 -->
+                <a class="font_14px" href="#">#手繪打版</a>
+                <a class="font_14px" href="#">#放縮</a>
+                <a class="font_14px" href="#">#修改版型</a>
+                <a class="font_14px" href="#">#電腦打版</a>
+              </div>
+              <!-- 成就 -->
+              <div class="achievement">
+                <span>作品：20</span>
+                <span>成交：3</span>
+              </div>
+                <!-- 地點 -->
+              <div class="area">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>台中市北屯區</span>
+              </div>
+            </li>
+            
+            <!--3.看更多 -->
+            <li class="more">
+              <a href="#"
+                >看更多 <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+          <!------------- 第二排第三個------------ -->
+          <ul class="portfolio">
+            <!-- 1.照片 -->
+            <li class="portfolio_img">
+              <a href="#"><img src="img/talnet/portfolio_img6.jpg" alt="avatar1"
+              />
+              <!-- 看過的產生遮罩 -->
+              <div class="portfolio_img_mask">
+                <span class="font_14px">已看過</span>
+              </div>
+            </a>
+
+              
+            </li>
+
+            <!-- 2.個人檔案包裏 -->
+            <li class="Info_wrapper">
+              <!-- 個人檔案 -->
+              <div class="Info">
+                <div class="avatar">
+                  <img src="img/talnet/talent_avatar6.png" alt="avatar1" />
+                </div>
+                <div class="editor">
+                  <h5 class="font_bold "><a href="#">陳亭如</a></h5>
+                  <div class="font_12px">VIP</div>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                  <i class="fa-solid fa-star font_12px"></i>
+                </div>
+              </div>
+              <!-- 專長 -->
+              <div class="special">
+                <!-- 偽元素塞入專長 -->
+                <a class="font_14px" href="#">#放縮</a>
+                <a class="font_14px" href="#l">#電腦打版</a>           
+              </div>
+              <!-- 成就 -->
+              <div class="achievement">
+                <span>作品：78</span>
+                <span>成交：53</span>
+              </div>
+              <!-- 地點 -->
+              <div class="area">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>新北市三重區</span>
+              </div>
+            </li>
+
+            <!--3.看更多 -->
+            <li class="more">
+              <a href="#"
+                >看更多 <i class="fa-solid fa-caret-down"></i
+              ></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- 上下分頁 -->
+        <nav role="navigation">
+          <ul class="cd-pagination font_12px">
+            <li class="button "><a class="disabled" href="#0">Prev</a></li>
+            <li><a class="current" href="#0">1</a></li>
+            <li><a href="#0">2</a></li>
+            <li><a href="#0">3</a></li>
+            <li><a href="#0">4</a></li>
+            <li><span>...</span></li>
+            <li><a href="#0">10</a></li>
+            <li class="button"><a href="#0">Next</a></li>
+          </ul>
+        </nav> <!-- cd-pagination-wrapper -->
+      </div>
+      </article>
+
+
+
+      
+
+    <!----------- 引用公共佈局 ---------->
+    <div id="footer"></div>
+
+    <!-- script---HTML引用公共佈局 -->
+
+
+    <script>
+      $(() => {
+        $("#header").load("header_footer_html/header.html");
+        $("#footer").load("header_footer_html/footer.html");
+      });
+    </script>
+
+    <!-- 縣市資料JS -->
+    <script>
+      new TwCitySelector();
+    </script>
+
+
+    <script src="js/talent.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1258 @@
+@import url(reset.css);
+
+/* ------------色彩----------------- */
+
+:root {
+  /* color */
+  --all_bgc: #f8f8f8; /* 網頁背景色/footer文字色*/
+  --all_font: #3f3f42; /* 文字色： */
+  --logo_orange: #ed6b2d; /* 主色橘 */
+  --logo_green: #198b3b; /* 主色綠*/
+  --logo_grey: #666666; /* 主色灰/小icon/footer背景色*/
+  --case_red: #ed2d3f; /* 案件標籤紅： */
+  --header_bgc: #ffffff; /* 背景色：舊#f7f3f6;  */
+  --index_banner_curve: #c79177; /* 首頁上面的背景曲線色： */
+  --index_guide_gbc: #f9dbaf; /* 首頁導引背景色*/
+  --light_grey: #cccccc; /* 首頁/搜尋吧/外框色 */
+  --select_green: #478b5c; /*下拉式選單*/
+  --hover_green: #52ca94;
+  --hover_button_green: #196e3b;
+  --hover_button_red: #c82737;
+  --footer_bgc: #3f3f42;
+  --footer_title: #9ca19e;
+}
+
+/* ------------文字----------------- */
+
+.font_banner {
+  font-size: 2vw; /* 如banner壓字*/
+}
+.font_26px {
+  font-size: 26px; /* 大標題*/
+  font-weight: bold;
+  color: #000;
+}
+.font_20px {
+  font-size: 20px; /* 小標題*/
+  font-weight: bold;
+}
+.font_bold {
+  font-weight: bold;
+}
+.font_16px {
+  font-size: 16px;
+}
+.font_14px {
+  font-size: 14px; /* footer*/
+}
+.font_12px {
+  font-size: 12px;
+}
+.font_bold {
+  font-weight: bold;
+}
+/* ------------按鈕----------------- */
+
+.ad_button {
+  display: inline-block;
+  color: var(--header_bgc);
+  background-color: var(--logo_green);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px var(--header_bgc);
+  transition: 0.2s;
+}
+.ad_button:hover {
+  background-color: var(--hover_button_green);
+}
+
+/* ------------區塊----------------- */
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* outline: 1px rgba(255, 0, 255, 0.5) solid; */
+}
+
+body {
+  font-family: Verdana, "微軟正黑體", Microsoft JhengHei, Arial, Geneva,
+    sans-serif, serif;
+  background-color: var(--all_bgc);
+  font-size: 16px; /* p段落/導覽列*/
+  letter-spacing: 1px;
+  color: var(--all_font);
+  line-height: 1.5;
+}
+
+.max-w_block {
+  width: 100%;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.main_block {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.main_block2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* ------------logo----------------- */
+
+.logo {
+  width: 215.4px;
+  height: 50px;
+  background-image: url(../img/logo-horizontal.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* outline: 1px rgba(255, 0, 255, 0.5) solid; */
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+
+/* ------------search bar----------------- */
+
+.search-bar-div {
+  display: inline-block;
+  text-align: center;
+  /* width: min-content; */
+
+  position: relative;
+
+  /* outline: 1px solid #ff0000; */
+}
+.search-bar {
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding-right: 12px;
+  padding-left: 12px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  box-shadow: 0px 0px 2px #cccccc;
+  background-color: var(--header_bgc);
+}
+.search-bar:focus {
+  border-color: var(--logo_green);
+  box-shadow: 0px 0px 2px var(--logo_green);
+}
+.search-bar-div button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: var(--header_bgc);
+
+  position: absolute;
+  top: 9px;
+  right: 10px;
+}
+.search-bar-div button i {
+  font-size: 20px;
+  color: var(--logo_grey);
+}
+
+.search-bar-div button:hover i {
+  color: var(--logo_green);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/*---------- 上下分頁  ----------*/
+
+.cd-pagination a,
+span {
+  color: var(--all_font);
+}
+
+/* https://codyhouse.co/gem/css-pagination */
+
+nav[role="navigation"] {
+  text-align: center;
+}
+
+.cd-pagination {
+  width: 90%;
+  max-width: 768px;
+  margin: 2em auto 4em;
+  text-align: center;
+}
+.cd-pagination li {
+  /* hide numbers on small devices */
+  display: none;
+  margin: 0 0.2em;
+}
+.cd-pagination li.button {
+  /* make sure prev next buttons are visible */
+  display: inline-block;
+}
+.cd-pagination a,
+.cd-pagination span {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* use padding and font-size to change buttons size */
+  padding: 0.6em 0.8em;
+  /* font-size: 1.6rem; */
+}
+.cd-pagination a {
+  border: 1px solid #e6e6e6;
+  border-radius: 0.25em;
+}
+.no-touch .cd-pagination a:hover {
+  background-color: #f2f2f2;
+}
+.cd-pagination a:active {
+  /* click effect */
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.cd-pagination a.disabled {
+  /* button disabled */
+  color: rgba(46, 64, 87, 0.4);
+  pointer-events: none;
+}
+.cd-pagination a.disabled::before,
+.cd-pagination a.disabled::after {
+  opacity: 0.4;
+}
+.cd-pagination .button:first-of-type a::before {
+  content: "\00ab  ";
+}
+.cd-pagination .button:last-of-type a::after {
+  content: " \00bb";
+}
+.cd-pagination .current {
+  /* selected number */
+  background-color: var(--logo_green);
+  border-color: var(--logo_green);
+  color: #ffffff;
+  pointer-events: none;
+}
+@media only screen and (min-width: 768px) {
+  .cd-pagination li {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-pagination {
+    margin: 4em auto 8em;
+  }
+}
+
+/*---------- 排序  ----------*/
+
+.sorting {
+  display: inline-block;
+  display: flex;
+}
+.sorting button {
+  border: none;
+  outline: none;
+  border-right: 1px solid var(--all_font);
+  background-color: var(--all_bgc);
+  font-size: 16px;
+  padding: 0 15px;
+}
+.sorting button:hover {
+  cursor: pointer;
+}
+.sorting button:last-child {
+  border-right: none;
+}
+.sorting i {
+  color: var(--logo_orange);
+  margin-left: 7px;
+}
+
+/*---------- 共用 表頭 開始 ----------*/
+
+header {
+  width: 100%;
+  min-height: 60px;
+  background-color: var(--header_bgc);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0px 2px 3px #cccccc;
+}
+
+h1 {
+  margin-right: 40px;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+}
+
+/* 導覽列 */
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+
+  /* background-color: #ed2d3f; */
+}
+
+.nav a {
+  padding: 5px 20px;
+  color: var(--all_font);
+
+  /* outline: 1px rgba(255, 0, 255, 0.5) solid; */
+}
+
+.nav a:hover {
+  font-weight: bold;
+  color: var(--logo_orange);
+}
+
+/* rwd找人才、找案件隱藏 */
+.talent_rwd,
+.case_rwd {
+  display: none;
+}
+/* rwd找人才、找案件的子選單隱藏 */
+.orderlist_rwd {
+  display: none;
+}
+
+/* 讓pc版子選單出現*/
+.nav li:hover {
+  position: relative;
+  z-index: 1;
+}
+.nav li:hover .orderlist {
+  display: block;
+}
+/* pc版子選單設定 */
+.orderlist {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px var(--light_grey);
+  display: none;
+
+  position: absolute;
+  left: 0;
+  top: 34px;
+  z-index: 2;
+}
+.orderlist li {
+  padding: 5px 20px;
+  width: 150px;
+}
+
+/* 登入註冊 */
+
+.member {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 40%;
+
+  /* background-color: #ed2d3f; */
+}
+
+.member a {
+  color: var(--logo_green);
+  padding: 5px 20px;
+  margin-left: 35px;
+
+  /* outline: 1px rgba(255, 0, 255, 0.5) solid; */
+}
+
+.loign:hover {
+  font-weight: bold;
+  color: var(--logo_green);
+}
+
+.member .register {
+  background-color: var(--logo_green);
+  color: #ffffff;
+  border-radius: 5px;
+}
+.member .register:hover {
+  font-weight: bold;
+}
+
+/* 漢堡 */
+
+#hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: var(--header_bgc);
+  /* border: 1px solid var(--logo_grey);
+  border-radius: 5px; */
+  border: 0;
+  padding: 0;
+
+  cursor: pointer;
+  /* outline: 1px solid orangered; */
+  transition: all 0.5s ease;
+}
+#hamburger span {
+  font-size: 36px;
+}
+
+#hamburger_expand {
+  margin: auto;
+}
+#hamburger_close {
+  margin: auto;
+}
+.display_none {
+  display: none;
+}
+
+/*---------- 共用 表頭 結束 ----------*/
+
+/*---------- 共用 表尾 開始 ----------*/
+footer {
+  background-color: var(--footer_bgc);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer a {
+  color: var(--all_bgc);
+}
+
+footer p {
+  color: var(--all_bgc);
+}
+
+footer li {
+  color: var(--all_bgc);
+}
+
+footer a:hover {
+  color: var(--logo_orange);
+}
+
+/* 左邊 */
+
+.footer_part1 {
+  width: 300px;
+
+  /* outline: 1px solid var(--all_bgc); */
+}
+.footer_part1 .logo {
+  background-image: url(../img/horizontal301X70white.svg);
+  margin-bottom: 20px;
+}
+
+.footer_part1 a {
+  display: inline-block;
+}
+
+.footer_part1 li {
+  margin-bottom: 15px;
+}
+
+/* 中間 */
+
+.footer_part2 {
+  /* margin-left: -100px; */
+
+  /* outline: 1px solid var(--all_bgc); */
+}
+.footer_part2 p {
+  color: var(--all_bgc);
+}
+
+.footer_part2 a {
+  display: inline-block;
+}
+
+.footer_part2 i {
+  font-size: 40px;
+  margin-right: 15px;
+  margin-top: 15px;
+  /* background-color: yellow; */
+}
+
+/* 右間 */
+
+.footer_part3 {
+  display: flex;
+
+  /* outline: 1px solid var(--all_bgc); */
+}
+.footer_part3 h3 {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  /* background-color: red; */
+}
+.footer_part3 h3 a {
+  /* border-bottom: 1px solid var(--all_bgc); */
+  color: var(--footer_title);
+}
+.footer_part3 li {
+  margin-bottom: 15px;
+}
+.footer_part3-1 {
+  margin-right: 50px;
+}
+
+.footer_tibame {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000;
+  color: #666666;
+  text-align: center;
+  font-size: 12px;
+}
+.footer_tibame a {
+  display: inline-block;
+  color: #666666;
+}
+/*---------- 共用 表尾 結束 ----------*/
+
+/* ---------- dialog 註冊開始 ---------- */
+
+/* google font style */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* Modal遮罩 */
+
+.hidden {
+  visibility: hidden;
+}
+
+.DivOverlapMask {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+
+  /* position: relative; */
+  /* margin: 0; */
+  /* padding: 0; */
+
+  background-color: rgba(102, 102, 102, 0.7);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  /* CSS 属性 visibility 显示或隐藏元素而不更改文档的布局。 */
+  /* 若将其子元素设为 visibility: visible，则该子元素依然可见 */
+  /* visibility: visible; */
+  /* visibility: hidden; */
+  /* display:none; */
+}
+
+/* 彈跳窗 */
+.regi_DivDialog {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+  z-index: 300;
+
+  background-color: var(--header_bgc);
+  padding: 20px 40px;
+  border-radius: 5px;
+
+  max-width: 400px;
+  max-height: 90vh;
+
+  /* 可設定「垂直」方向，當超出範圍時自動變成捲軸呈現方式。 */
+  overflow-y: scroll;
+}
+
+/* x按鈕 */
+.closeDialog {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+.closeDialog span {
+  margin: 0;
+  padding: 0;
+}
+.closeDialog:hover {
+  cursor: pointer;
+  background-color: rgba(204, 204, 204, 0.6);
+}
+.closeDialog:active {
+  cursor: pointer;
+  background-color: rgba(204, 204, 204, 0.9);
+}
+
+/* 表單 */
+/* logo */
+.DivDialog_logo {
+  background: url(../img/logo-vertical-02.svg) no-repeat;
+  background-position: center;
+  height: 100px;
+  width: auto;
+
+  margin-bottom: 15px;
+}
+/* 社群登入 */
+.socialAuthLinks {
+  display: flex;
+  justify-content: space-around;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+.socialAuthLinks a {
+  display: block;
+}
+.social .facebook {
+  background-color: RGB(102, 117, 185);
+}
+.social .google {
+  background-color: RGB(203, 106, 82);
+}
+
+.social_logo {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  text-align: center;
+}
+.social_logo i {
+  line-height: 40px;
+  font-size: 22px;
+  color: var(--header_bgc);
+}
+
+/* 分隔線 */
+.divider {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  position: relative;
+  z-index: 0;
+}
+.divider::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--light_grey);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+.divider span {
+  padding: 0 10px;
+
+  background-color: var(--header_bgc);
+  z-index: 2;
+}
+
+/* 輸入框 */
+.inputText_wrapper {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  /* outline: 1px solid blue; */
+}
+.inputText_wrapper span {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.inputText_wrapper input {
+  flex-grow: 1;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  padding-left: 5px;
+  /* outline: 1px solid red; */
+}
+
+.inputText_wrapper:hover {
+  border: 2px solid #cccccc;
+}
+/* .inputText_wrapper:focus{
+   border:var(--logo_green);
+} */
+
+.inputText_wrapper span {
+  flex-grow: 0;
+}
+#regi_show_password {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+}
+#regi_show_password .off {
+  display: none;
+}
+/* 勾選是否訂閱 */
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.subscribe label {
+  margin-left: 5px;
+}
+
+/* --送出-- */
+.regi_DivDialog .submit {
+  border: 0;
+  width: 100%;
+  color: var(--header_bgc);
+  background-color: var(--logo_green);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  margin-bottom: 15px;
+}
+.regi_DivDialog .submit:hover {
+  background-color: var(--hover_green);
+}
+
+/* -- 表尾 -- */
+.terms a {
+  display: inline-block;
+  color: var(--logo_green);
+}
+.terms {
+  margin-bottom: 15px;
+}
+.switch_identity {
+  display: flex;
+  justify-content: center;
+}
+
+.switch_identity p {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+#switch_login {
+  display: inline-block;
+  color: var(--logo_green);
+  font-weight: bold;
+}
+#switch_login:hover {
+  text-decoration: underline;
+}
+
+/* ---------- dialog 註冊結束 ---------- */
+
+/* ---------- dialog 登入開始 ---------- */
+
+/* 彈跳窗 */
+.login_DivDialog {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+  z-index: 200;
+
+  background-color: var(--header_bgc);
+  padding: 20px 40px;
+  border-radius: 5px;
+
+  max-width: 400px;
+  max-height: 90vh;
+
+  /* 可設定「垂直」方向，當超出範圍時自動變成捲軸呈現方式。 */
+  overflow-y: scroll;
+}
+
+.login_DivDialog * {
+  /* outline: 1px solid red; */
+}
+
+/* 社群登入 */
+.socialAuthLinks {
+  display: flex;
+  justify-content: space-around;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+.socialAuthLinks a {
+  display: block;
+}
+.social .facebook {
+  background-color: RGB(102, 117, 185);
+}
+.social .google {
+  background-color: RGB(203, 106, 82);
+}
+
+.social_logo {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  text-align: center;
+}
+.social_logo i {
+  line-height: 40px;
+  font-size: 22px;
+  color: var(--header_bgc);
+}
+
+/* 分隔線 */
+.divider {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  position: relative;
+  z-index: 0;
+}
+.divider::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--light_grey);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+.divider span {
+  padding: 0 10px;
+
+  background-color: var(--header_bgc);
+  z-index: 2;
+}
+
+/* 輸入框 */
+.inputText_wrapper {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  margin-bottom: 15px;
+
+  /* outline: 1px solid blue; */
+}
+.inputText_wrapper label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.inputText_wrapper span {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.inputText_wrapper label input {
+  flex-grow: 1;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  padding-left: 5px;
+  /* outline: 1px solid red; */
+}
+
+.inputText_wrapper:hover {
+  border: 2px solid #cccccc;
+}
+/* .inputText_wrapper:focus{
+   border:var(--logo_green);
+} */
+
+.inputText_wrapper label span {
+  flex-grow: 0;
+}
+#login_show_password {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+}
+#login_show_password .off {
+  display: none;
+}
+
+/* <!-- 自動登入%忘記密碼 --> */
+
+.autoLogin_forget {
+  display: flex;
+  justify-content: space-between;
+}
+.autoLogin_forget a {
+  color: var(--all_font);
+}
+.autoLogin_forget a:hover {
+  color: var(--logo_green);
+}
+.autoLogin {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.autoLogin label {
+  margin-left: 5px;
+}
+
+/* --送出-- */
+.login_DivDialog .submit {
+  border: 0;
+  width: 100%;
+  color: var(--header_bgc);
+  background-color: var(--logo_green);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  margin-bottom: 15px;
+}
+.login_DivDialog .submit:hover {
+  background-color: var(--hover_green);
+}
+
+/* -- 表尾 -- */
+
+.switch_identity {
+  display: flex;
+  justify-content: center;
+}
+.switch_identity p {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+#switch_register {
+  display: inline-block;
+  color: var(--logo_green);
+  font-weight: bold;
+}
+#switch_register:hover {
+  text-decoration: underline;
+}
+
+/* ---------- dialog 登入結束 ---------- */
+
+/* ----------------------------------- */
+/* ----------------RWD---------------- */
+/* ----------------------------------- */
+@media screen and (max-width: 1440px) {
+  /* ------------header----------------- */
+  header.max-w_block {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 100vw;
+  }
+  h1 {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  /* ------------header----------------- */
+  header.max-w_block {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100vw;
+  }
+  .logo {
+    width: 193.8px;
+    height: 45px;
+  }
+  .nav {
+    width: 70%;
+  }
+  .nav a {
+    padding: 5px 10px;
+  }
+  .member {
+    width: 30%;
+  }
+  .member a {
+    margin-left: 15px;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* ------------header----------------- */
+
+  /* 導覽列 */
+
+  .loign:hover {
+    background-color: var(--logo_green);
+    font-weight: bold;
+    color: var(--header_bgc);
+  }
+  .member .register:hover {
+    background-color: var(--logo_green);
+    font-weight: bold;
+    color: var(--header_bgc);
+  }
+  .nav a:hover {
+    background-color: var(--logo_orange);
+    font-weight: bold;
+    color: var(--header_bgc);
+  }
+
+  .menu {
+    width: 100vw;
+    position: absolute;
+    top: 60px;
+    right: -100vw;
+
+    padding: 12px 24px;
+    background-color: var(--header_bgc);
+    box-shadow: inset 0px 2px 3px #cccccc, 0px 2px 3px #cccccc;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.5s;
+  }
+  .menu_active {
+    right: 0;
+  }
+
+  .menu li a {
+    min-height: 50px;
+    line-height: 40px;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--light_grey);
+  }
+  .member {
+    background-color: var(--header_bgc);
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    order: 1;
+  }
+  .member a {
+    display: block;
+    width: 100%;
+    color: var(--logo_green);
+    margin-left: 0;
+  }
+  .member .register {
+    background-color: var(--header_bgc);
+    color: var(--logo_green);
+    border-radius: 0px;
+  }
+  .nav {
+    background-color: var(--header_bgc);
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    order: 2;
+  }
+
+  /* li最後一個不要底線 */
+  .nav > li:last-child a {
+    border-bottom: none;
+  }
+  /* PC版找人才、找案件關閉 */
+  .talent_pc,
+  .case_pc {
+    display: none;
+  }
+  /* PC版子選單關閉 */
+  .nav li:hover .orderlist {
+    display: none;
+  }
+  /* rwd找人才、找案件開啟 */
+  .talent_rwd,
+  .case_rwd {
+    display: block;
+  }
+  .orderlist_rwd {
+    display: none;
+  }
+  /* rwd版子選單縮排 */
+  .orderlist_rwd li {
+    padding-left: 20px;
+  }
+
+  /* 漢堡 */
+
+  #hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* ------------文字----------------- */
+
+  .font_banner {
+    font-size: 3vw; /* 如banner壓字*/
+  }
+  .font_banner_button {
+    font-size: 3vw;
+  }
+  .font_26px {
+    font-size: 24px; /* 大標題*/
+    font-weight: bold;
+    color: #000;
+  }
+  .font_20px {
+    font-size: 18px; /* 小標題*/
+    font-weight: bold;
+  }
+  . {
+    font-weight: bold;
+  }
+  .font_16px {
+    font-size: 14px;
+  }
+  .font_14px {
+    font-size: 12px; /* footer*/
+  }
+  .font_12px {
+    font-size: 10px;
+  }
+
+  /* ------------header----------------- */
+
+  header.max-w_block {
+    min-height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 100vw;
+  }
+  h1 {
+    margin-right: 0;
+  }
+  .logo {
+    width: 150px;
+    height: 35px;
+  }
+
+  .menu {
+    width: 100vw;
+    position: absolute;
+    top: 50px;
+  }
+
+  /* 漢堡 */
+
+  #hamburger span {
+    font-size: 24px;
+  }
+
+  /* ------------footer----------------- */
+  footer {
+    flex-direction: column;
+  }
+  footer div {
+    margin-bottom: 10px;
+  }
+  .footer_part2 {
+    order: 3;
+  }
+  .footer_part1 ul {
+    display: none;
+  }
+  .footer_part3 {
+    flex-direction: column;
+  }
+
+  .footer_part3-1:nth-child(2) {
+    display: none;
+  }
+  /* ---------- dialog 註冊開始 ---------- */
+  /* 彈跳窗 */
+  .regi_DivDialog {
+    padding: 20px 20px;
+    max-width: 350px;
+    max-height: 90vh;
+
+    /* 可設定「垂直」方向，當超出範圍時自動變成捲軸呈現方式。 */
+    overflow-y: scroll;
+  }
+
+  /* ---------- dialog 登入開始 ---------- */
+
+  /* 彈跳窗 */
+  .login_DivDialog {
+    padding: 20px 20px;
+    max-width: 350px;
+    max-height: 90vh;
+
+    /* 可設定「垂直」方向，當超出範圍時自動變成捲軸呈現方式。 */
+    overflow-y: scroll;
+  }
+}

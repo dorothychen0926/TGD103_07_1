@@ -1,0 +1,737 @@
+@import url(reset.css);
+@import url(layout.css);
+
+.nav > li:nth-child(3) > a:nth-child(1) {
+  color: var(--logo_orange);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .nav > li:nth-child(3) > a:nth-child(1) {
+    color: var(--all_font);
+    font-weight: normal;
+  }
+}
+
+.top {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
+}
+/* =============找案件_開始 =============*/
+
+/* ----------- 找案件_搜尋器  ---------- */
+
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 30px;
+
+  background-color: var(--header_bgc);
+  border-radius: 5px;
+  border: 1px solid var(--light_grey);
+  box-shadow: 0 2px 6px rgb(26 31 28 / 8%);
+}
+
+.search-container * {
+  margin-bottom: 10px;
+}
+
+.search-container h2 {
+  margin-bottom: 20px;
+}
+
+/* 搜尋吧 */
+.search-container .search-bar {
+  width: 700px;
+}
+
+/* 熱門關鍵字 */
+.search-container p {
+  display: inline-block;
+}
+
+.search-container h3 {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.search-container h3 button {
+  color: var(--logo_green);
+  background-color: transparent;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ----------- 找案件_icon ---------- */
+
+.case_item {
+  display: flex;
+  justify-content: space-between;
+  /* outline: 1px solid brown; */
+}
+.case_item.main_block2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.case_item h3 {
+  width: 12.5%;
+  margin-right: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  text-align: center;
+  filter: grayscale(100%);
+}
+
+/* click後加上 */
+h3.changeFilter {
+  filter: grayscale(0);
+}
+
+.case_item h3 p {
+  color: var(--all_font);
+  margin-bottom: 0px;
+
+  /* outline:1px solid aqua;  */
+}
+/* click後加上 */
+.case_item h3 p.changeColor {
+  color: var(--logo_orange);
+}
+
+.case_item h3 span {
+  display: block;
+}
+/* click後加上 */
+.case_item h3 span.changeColor {
+  color: var(--logo_orange);
+}
+
+.case_item h3 p:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  display: block;
+  margin: 5px auto;
+}
+.case_item h3:hover {
+  filter: grayscale(0);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.case_item h3:hover p {
+  color: var(--logo_orange);
+}
+.case_item h3:hover span {
+  color: var(--logo_orange);
+}
+
+.case_item .design:before {
+  background: url(../img/index/index_design.svg) no-repeat 50%;
+}
+.case_item .patternMake:before {
+  background: url(../img/index/index_patternMake.svg) no-repeat 50%;
+}
+.case_item .sample:before {
+  background: url(../img/index/index_sample.svg) no-repeat 50%;
+}
+.case_item .equipment:before {
+  background: url(../img/index/index_equipment.svg) no-repeat 50%;
+}
+.case_item .Computer:before {
+  background: url(../img/index/index_Computer.svg) no-repeat 50%;
+}
+.case_item .material:before {
+  background: url(../img/index/index_material.svg) no-repeat 50%;
+}
+.case_item .fabric:before {
+  background: url(../img/index/index_fabric.svg) no-repeat 50%;
+}
+.case_item .under-lease:before {
+  background: url(../img/index/index_under-lease.svg) no-repeat 50%;
+}
+
+/* 篩選區 */
+
+.search-container li {
+  display: inline-block;
+  /* 取消下間邊距 */
+  margin-bottom: 0;
+  margin-right: 30px;
+  color: var(--all_font);
+
+  /* outline: 1px solid red; */
+}
+.filter {
+  /* 再往上推出空間*/
+  margin-top: 10px;
+  border-bottom: 1px solid var(--light_grey);
+}
+.filter button {
+  background-color: transparent;
+  /* display: flex;
+  align-items: flex-end; */
+  border: 0;
+  padding: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  color: var(--all_font);
+}
+.filter i {
+  margin-left: 7px;
+  color: var(--all_font);
+}
+/* 預設為第一頁展開 */
+.filter_content ul:first-child {
+  display: block;
+}
+/* 預設其它ul隱藏 */
+.filter_content ul {
+  display: none;
+}
+/* 頁籤點選變色 */
+.filter button.filter_active {
+  color: var(--logo_orange);
+}
+.filter i.filter_active {
+  color: var(--logo_orange);
+}
+.filter_content ul li {
+  width: 15%;
+}
+/* 不限一律橘色 */
+.filter_content .unlimited {
+  color: var(--logo_orange);
+}
+/* 若勾選check ，則變色*/
+input[type="checkbox"]:checked ~ label {
+  color: var(--logo_orange);
+}
+
+/* ----------- 找案件_已搜尋 ---------- */
+
+.filter_selected {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.filter_selected::before {
+  content: "已搜尋：";
+}
+.filter_selected div {
+  display: inline-block;
+}
+.filter_selected div span {
+  display: inline-block;
+  background-color: rgb(235, 251, 244);
+  border: 1px solid var(--logo_green);
+  color: var(--logo_green);
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin-right: 5px;
+}
+.filter_selected div span:hover {
+  background-color: #d6f6e8;
+}
+.filter_selected span i {
+  margin-left: 5px;
+}
+.remove {
+  display: none;
+}
+
+/* ----------- 找案件_搜尋與結果 ---------- */
+.case_wrapper {
+  display: flex;
+
+  /* outline: 1px solid darkmagenta; */
+}
+
+/* 左邊搜尋結果 */
+.case_article {
+  width: 75%;
+  padding: 0 25px;
+
+  /* outline: 1px solid darkmagenta; */
+}
+
+/* 搜尋 */
+.case_top {
+  margin-bottom: 20px;
+}
+
+.case_top h3 {
+  display: inline-block;
+  color: var(--logo_orange);
+}
+
+/* 筆數與排序 */
+
+.case_div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* 搜尋結果 */
+
+.result {
+}
+
+.caseBox {
+  display: flex;
+  width: 100%;
+  height: 199px;
+  background-color: var(--header_bgc);
+  /* overflow: hidden; */
+  border-radius: 5px;
+  outline: 1px solid var(--light_grey);
+  box-shadow: 0 2px 6px rgb(26 31 28 / 8%);
+  padding: 16px;
+
+  margin-bottom: 25px;
+}
+.caseBox:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 10px rgb(26 31 28 / 16%);
+}
+/* -- 照片 -- */
+.caseBox a {
+  display: block;
+}
+
+.caseBox_img {
+  flex-shrink: 0;
+
+  width: 250px;
+  height: 167px;
+
+  margin-right: 10px;
+
+  position: relative;
+}
+
+.caseBox .img_1 {
+  background-image: url(../img/case/caseBox_img1.jpg);
+  background-position: center 70%;
+}
+.caseBox .img_2 {
+  background-image: url(../img/case/caseBox_img2.jpg);
+}
+.caseBox .img_3 {
+  background-image: url(../img/case/caseBox_img3.jpg);
+}
+.caseBox .img_4 {
+  background-image: url(../img/case/caseBox_img4.jpg);
+}
+
+.caseBox_img .status {
+  width: 80px;
+  height: 0;
+  border-right: 10px solid transparent;
+
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.caseBox_img span {
+  position: absolute;
+  left: 5px;
+  bottom: 0px;
+  font-size: 14px;
+  color: #f8f8f8;
+  z-index: 3;
+}
+/* 案件狀態 */
+.urgent {
+  border-bottom: 20px solid var(--case_red);
+}
+.general {
+  border-bottom: 20px solid var(--logo_green);
+}
+.long-term {
+  border-bottom: 20px solid var(--logo_orange);
+}
+
+/* <!-- 看過的產生遮罩 --> */
+
+.caseBox_img .portfolio_img_mask {
+  /* 看過的產生遮罩 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.0001),
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.caseBox_img .portfolio_img_mask span {
+  color: var(--header_bgc);
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+}
+
+/* -- 資訊 -- */
+
+.caseBox-wrap {
+  /* 包裏所有資料 */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  /* background-color: cadetblue; */
+}
+
+.caseBox_Info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex-basis: 65%;
+  padding: 0 10px 10px;
+
+  /* background-color: chartreuse; */
+}
+
+.caseBox_Info1 h3 a {
+  color: var(--logo_green);
+}
+.caseBox_Info1 h3:hover a {
+  text-decoration: underline;
+}
+
+.caseBox_client {
+  display: flex;
+  align-items: center;
+}
+.caseBox_client .photo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.caseBox_client .client1 {
+  background-image: url(../img/case/caseBox_client1.png);
+}
+
+.caseBox_client .client2 {
+  background-image: url(../img/case/caseBox_client2.png);
+}
+
+.caseBox_client .client3 {
+  background-image: url(../img/case/caseBox_client3.png);
+}
+
+.caseBox_client .client4 {
+  background-image: url(../img/case/caseBox_client4.png);
+}
+
+.caseBox_client h4 {
+  display: inline-block;
+  margin-left: 10px;
+}
+.caseBox_client h4:hover a {
+  text-decoration: underline;
+}
+.caseBox_client h4 a {
+  color: var(--all_font);
+}
+
+.caseBox_Info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex-basis: 35%;
+  padding: 0 0 0 10px;
+
+  /* background-color: darksalmon; */
+}
+.caseBox_Info2 p {
+  /* 讓google fonts垂直置中 */
+  display: flex;
+  align-items: center;
+}
+
+/* google fonts設定 */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+#like i{
+  font-size: 24px;
+  margin-right: 5px;
+  
+}
+
+/* #like, .fa-heart.red{
+  font-size: 24px;
+  margin-right: 5px;
+  color: var(--case_red);
+} */
+
+.caseBox_Info2 p span {
+  font-size: 14px;
+}
+.material-symbols-outlined {
+  margin-right: 5px;
+}
+
+.caseBox_feature {
+  flex-basis: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-left: 10px;
+
+  /* background-color: yellow; */
+}
+
+.caseBox_feature button {
+  border: 0px;
+  cursor: pointer;
+  color: var(--all_font);
+  padding: 5px 10px;
+  /* outline: 1px solid var(--all_font); */
+  border-radius: 5px;
+  margin-right: 20px;
+
+  /* 讓google fonts垂直置中 */
+  display: flex;
+  align-items: center;
+}
+
+/* 立即報價樣式 */
+/* .caseBox_feature .hightlight {
+  background-color: var(--logo_orange);
+  color: var(--header_bgc);
+  outline: none;
+} */
+
+/* 立即報價  google fonts樣式 */
+/* .caseBox_feature .hightlight span {
+  color: var(--header_bgc);
+} */
+
+/* hover時，a內的東西變色 */
+.caseBox_feature button:hover {
+  background-color: var(--logo_orange);
+  color: var(--header_bgc)!important;
+  outline: none;
+}
+
+/* hover時，google icon變色 */
+.caseBox_feature button:hover span {
+  color: var(--header_bgc);
+}
+
+/* hover時，font awesome變色 */
+.caseBox_feature button:hover i {
+  color: var(--header_bgc);
+}
+
+/* 立即報價hover的變色 */
+/* .caseBox_feature .hightlight:hover {
+  background-color: transparent;
+  color: var(--logo_orange);
+  outline: 1px solid var(--logo_orange);
+  font-weight: bold;
+} */
+/* 立即報價hover，google icon變色  */
+/* .caseBox_feature .hightlight:hover span {
+  color: var(--logo_orange);
+} */
+
+/* 右邊側欄 */
+.case_aside {
+  width: 25%;
+  text-align: center;
+
+  /* 與案件推齊 */
+  padding-top: 44px;
+
+  /* outline: 1px solid darkmagenta; */
+}
+.ad_resume {
+  display: block;
+  width: 250px;
+  height: 375px;
+  background-image: url(../img/case/case_ad.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0px 10px rgba(250, 250, 250, 0.8);
+  border: 1px solid var(--light_grey);
+  margin: 0 auto;
+
+  position: relative;
+}
+.ad_resume_div {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  text-align: center;
+  /* outline: 1px solid red; */
+}
+
+.ad_resume_div h2 {
+  color: var(--header_bgc);
+  font-weight: 500;
+}
+
+.ad_resume_div button {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* ----------------------------------- */
+/* ----------------RWD---------------- */
+/* ----------------------------------- */
+
+@media screen and (max-width: 414px) {
+  /* <!----------- 找案件_搜尋器 ----------> */
+
+  .search-container {
+    padding: 16px 16px;
+  }
+  .search-container_wrap.max-w_block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 搜尋吧 */
+  .search-container .search-bar-div {
+    display: block;
+    width: 100%;
+  }
+  .search-container .search-bar {
+    width: 100%;
+  }
+  /* -- 熱門關鍵字 -- */
+  .keyword {
+    display: none;
+  }
+  /* ----------- 找案件_icon ---------- */
+
+  .case_item {
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  .case_item h3 {
+    width: 25%;
+    padding-bottom: 20px;
+  }
+
+  /* <!-- 篩選區 --> */
+  .filter,
+  .filter_content {
+    display: none;
+  }
+
+  /* 右邊側欄 */
+  .case_aside {
+    display: none;
+  }
+
+  /* 左邊搜尋結果 */
+  .case_article {
+    width: 100%;
+  }
+
+  /* 搜尋 */
+  .case_top {
+    display: none;
+  }
+
+  /* 筆數與排序 */
+  .case_div span {
+    padding-left: 30px;
+  }
+  .case_div {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .sorting {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--all_font);
+  }
+  .sorting button {
+    flex-grow: 1;
+  }
+  /* <!-- 搜尋結果 --> */
+  .result {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /* <!-- 案子 --> */
+  .caseBox {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 282px;
+    height: 0;
+    height: auto;
+    padding: 16px;
+
+    margin-bottom: 25px;
+  }
+
+  /* <!-- 資訊 --> */
+  .caseBox-wrap {
+    /* 包裏所有資料 */
+    max-width: 250px;
+    display: block;
+    /* flex-direction: column; */
+    flex-wrap: none;
+    /* background-color: cadetblue; */
+  }
+  .caseBox_Info1 {
+    justify-content: flex-start;
+    flex-basis: auto;
+  }
+  .caseBox_Info1 h3 a,
+  .caseBox_client {
+    margin-top: 10px;
+  }
+  .caseBox_Info2 p {
+    margin-bottom: 10px;
+  }
+  .caseBox_feature {
+    flex-basis: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .caseBox_feature button {
+    width: 45%;
+    flex-shrink: 0;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+}

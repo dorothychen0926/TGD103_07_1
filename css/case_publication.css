@@ -1,0 +1,483 @@
+@import url(reset.css);
+@import url(layout.css);
+
+.nav > li:nth-child(6) > a:nth-child(1) {
+  color: var(--logo_orange);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+    .nav > li:nth-child(6) > a:nth-child(1) {
+      color: var(--all_font);
+      font-weight:normal;
+    }
+  }
+
+.top {
+  width: 100%;
+  height: 60px;
+
+}
+
+
+/* =============刊登案件_開始 =============*/
+
+.post_wrapper.main_block{
+    margin: 30px auto 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px var(--light_grey);
+    
+    /* outline: 1px solid blue; */
+
+}
+
+/* ----------- 刊登進度 ---------- */
+
+.post_progress{
+    display: flex;
+    align-items: center;
+
+    padding-left: 110px;
+
+    /* outline: 1px solid red; */
+}
+
+/* 刊登進度 */
+.post_progress p{
+    position: relative;
+    margin-right: 30px;
+}
+
+.post_progress p::before{
+    content: "";
+    width: 5px;
+    height:25px;
+    background-color: var(--logo_green);
+
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.post_progress span{
+    color: var(--logo_orange);
+}
+
+/* 進度條 */
+.progress_bar_container{
+    width: 60%;
+    height: 7px;
+    background-color: var(--light_grey);
+    border-radius: 5px ;
+
+    margin-right: 30px;
+
+    position: relative;
+}
+
+.progress_bar{
+    width: 50%;
+    height: 7px;
+    background-color: var(--logo_orange);
+    border-radius: 5px 0 0 5px ;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+
+
+/* ----------- 填寫內容 ---------- */
+
+.post_content{
+    display: flex;
+    padding: 50px 50px 0 50px;
+}
+
+.post_content aside{
+    width: 30%;
+    border-right: 1px solid var(--light_grey);
+    padding: 0 50px;
+
+}
+.post_content form{
+    width: 70%;
+    padding: 0 50px ;
+
+}
+
+/* <!-- 左邊側欄 --> */
+
+/* 關閉 */
+form p:first-child{
+    display: none;
+}
+
+.step_box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.step_box .step{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--light_grey);
+
+    text-align: center;
+    line-height: 80px;
+}
+
+.step_box:first-child div{
+    background-color: var(--logo_orange);
+    color: var(--all_bgc);
+}
+
+.step_box .step{
+    margin-right: 20px;
+}
+
+/* <!-- 右邊表單 --> */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label span{
+    color: var(--case_red);
+}
+
+form label {
+    font-weight: bold;
+}
+
+/* 對齊調整 */
+form > div{
+    margin-bottom: 20px;
+}
+
+label + div , label + select, label + input{
+    margin-top: 8px;
+    margin-left: 14px;
+}
+
+
+
+/* 合作模式 */
+.Cooperation{
+    display: flex;
+}
+.Cooperation div{
+margin-right: 20px;
+}
+
+/* 案件名稱 */
+.case_name_wrap input{
+    display: block;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+
+    
+    height: 40px;
+    width: 500px;
+
+    border-radius: 5px;
+    border: 1px solid var(--light_grey);
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+/* 執行內容 */
+.case_content_wrap textarea{
+
+
+    width: 500px;
+    height:200px;
+
+    border-radius: 5px;
+    border: 1px solid var(--light_grey);
+    padding:10px;
+    cursor: pointer;
+    font-size: 16px;
+
+    /* 如果内容溢出，则浏览器提供滚动条 */
+    overflow: auto;
+
+    /* word-wrap:break-word; */
+
+    /* 決定如何處理元素中的空白字元及斷行 :保留原排版及空白字元，在 overflow時會自動換行*/
+    white-space: pre-wrap;
+
+    /* 如果文字太長，無法裝進容器裡，允許文字在任意位置斷行 */
+    overflow-wrap: break-word;
+
+    /* 对于左对齐（ltr）文本，内容从左到右水平流动。 */
+    writing-mode:horizontal-tb
+
+    text-align: left;
+}
+
+
+.case_content_wrap a{
+    font-size: 14px;
+    text-decoration:underline;
+    color:var(--all_font);
+}
+
+.case_content_wrap div{
+    display: flex;
+    flex-direction: column;
+
+}
+.case_content_wrap div input{
+    margin-top: 5px;
+    align-self: flex-start;
+}
+
+/* 預計完成日 */
+
+.deadline_wrap{
+    position: relative;
+
+}
+
+#deadline{
+    display: block;
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--light_grey);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 14px;
+
+    position: relative;
+    background-image: url(../img/publication/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position:225px center;
+}
+
+/* 使日期選擇器佈滿 */
+::-webkit-calendar-picker-indicator{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* 請問您的預算 */
+.yourBudget_wrap select{
+    display: block;
+    width: 250px;
+    height: 30px;
+    border: 1px solid var(--light_grey);
+    border-radius: 5px;
+    padding-left: 13px;
+    font-size: 14px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    position: relative;
+    background-image: url(../img/publication/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position:225px center;
+
+    position: relative;
+}
+/* .yourBudget_wrap select:after{
+    content: "";
+    width: 14px;
+    height: 8px;
+    background-image: url(/img/publication/chevron-down-solid.svg);
+    
+
+    position: absolute;
+    top: 0px;
+    left: 225px;
+    z-index: 3;
+
+    
+    pointer-events: none;
+
+} */
+
+/* 請問是否有指定地點 */
+
+.Designated_place{
+    display: flex;
+    
+}
+.Designated_place div{
+    margin-right: 20px;
+}
+
+/* 請問是否有指定地點2 */
+.my-style-selector{
+    display: flex;
+}
+.my-style-selector .county{
+    margin-right: 20px;
+
+    display: block;
+    width: 125px;
+    height: 30px;
+    border: 1px solid var(--light_grey);
+    border-radius: 5px;
+    padding-left: 13px;
+    font-size: 14px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    position: relative;
+    background-image: url(../img/publication/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position:100px center;
+
+    position: relative;
+}
+
+.my-style-selector .district{
+    margin-right: 20px;
+
+    display: block;
+    width: 125px;
+    height: 30px;
+    border: 1px solid var(--light_grey);
+    border-radius: 5px;
+    padding-left: 13px;
+    font-size: 14px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    position: relative;
+    background-image: url(../img/publication/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position:100px center;
+
+    position: relative;
+}
+
+/* ----------- 下一步---------- */
+
+.next_step_section{
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+    
+}
+
+/* 下一步 */
+
+.next_step{
+    padding: 10px;
+    text-align: cneter;
+    font-weight: bold;
+    color: var(--all_bgc);
+    border: none;
+    width: 150px;
+    display: inline-block;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/* ----------------------------------- */
+/* ----------------RWD---------------- */
+/* ----------------------------------- */
+
+@media screen and (max-width: 414px) {
+
+    .top{
+        height: 50px;
+
+    }
+
+    /* ====刊登案件_開始 =====*/
+
+    .post_wrapper.main_block{
+    width: 100%;
+    margin: 0 auto 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px var(--light_grey);
+    
+    /* outline: 1px solid blue; */}
+
+    .post_progress{
+    width: 100%;
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+
+    }
+    .post_progress>p{
+        margin-bottom: 10px;
+    }
+    .post_progress>div{
+        margin-bottom: 10px;
+    }
+    .progress_bar_container{
+    width: 90%;
+    }
+ 
+   
+
+    /* --------- 填寫內容 ----- */
+
+    .post_content{
+    padding: 0px;
+    }
+
+    .post_content form{
+        width: 100%;
+        padding: 0 10px ;
+    
+    }
+
+
+    /* <!-- 左邊側欄 --> */
+   
+    .post_content aside{
+        display: none;
+    }
+
+    /* <!-- 右邊表單 --> */
+
+    .case_name_wrap input{
+        width: 90%;      
+    }
+
+    .case_content_wrap textarea{
+        width: 90%;   
+    }
+
+ }
+
+
+
+
+
+}

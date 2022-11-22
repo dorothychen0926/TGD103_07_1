@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- style -->
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- slick -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+    <!-- slick end-->
+
+    <!-- 標題icon -->
+    <link rel="icon" href="img/ico.ico" type="image/x-icon" />
+
+    <title>Partner Clothing 服裝人才媒合平台</title>
+
+    <!-- HTML引用公共佈局 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    
+<!-- 使用來自 CDN 的 Swiper -->
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+  </head>
+  <body >
+ 
+
+    <!----------- 引用公共佈局 ---------->
+    <div id="header"></div>
+
+    <!----------- 首頁_banner ---------->
+
+
+      <section class="index_banner">
+          <div class="h2">
+            <h2 class="font_banner">你要的人才都在這裡<br />最專業的親密夥伴<br /></h2>
+            <h2 class="font_banner">Your close partner in business</h2>
+          </div>
+      </section>
+
+      <!----------------- 最新案件 ----------------->
+
+      <section class="index_case main_block2">
+        
+        <h3 class="font_26px"><img src="img/index/index_latest.png" alt="latest">最新案件需求</h3> 
+        <h4 class="font_20px">快速尋找案件，立即開始洽談</h4>
+
+               
+        <div class="case_wrap">
+          <!-- 往前 -->
+          <button  id="previous"><div></div></button>
+          
+        
+            
+          <!-- 輪播區-->
+          <ul class="slider">
+            <!-- 案件一 -->
+
+              <li class="case">
+                <a href="case.html">
+                  <!-- 圖片 -->
+                  <div class="case_pic pic1">
+                    <div class="status urgent"></div>
+                    <span>急件</span>
+                </div>
+                  <!-- 資訊 -->
+                  <div class="case_info">
+                    <h5 class="font_bold" >素色棉質現成上衣500件，團體制服使用，需客製男女版型</h5>
+                    <div class="client">
+                      <div class="client_pic client1"></div>
+                      <p>麥格瑞制服設計</p>
+                    </div>
+                    <p class="location"><span class="material-symbols-outlined">location_on</span>地區：新北市新莊區</p>
+                    <p>更新日期：2022/10/15</p>
+    
+                    </div>
+                  </a>
+              </li>
+
+            <!-- 案件二 -->
+
+              <li class="case">
+                <a href="case.html">
+                  <!-- 圖片 -->
+                <div class="case_pic pic2">
+                  <div class="status general"></div>
+                  <span>一般案件</span>
+              </div>
+                <!-- 資訊 -->
+                <div class="case_info">
+                  <h5 class="font_bold " >徵求：外銷設計師/打版師，運動內衣/緊身褲/機能型外套等產品</h5>
+                  <div class="client">
+                    <div class="client_pic client2"></div>
+                    <p>哈果運動時尚實業</p>
+                  </div>
+                  <p class="location"><span class="material-symbols-outlined">location_on</span>地區：台北市中山區</p>
+                  <p>更新日期：2022/10/14</p>
+  
+                  </div>
+                </a>
+              </li>          
+    
+            <!-- 案件三 -->
+              <li class="case">
+                <!-- 圖片 -->
+                <a href="case.html">
+                  <div class="case_pic pic3">
+                    <div class="status long-term"></div>
+                    <span>長期合作</span>
+                </div>
+                  <!-- 資訊 -->
+                  <div class="case_info">
+                    <h5 class="font_bold " >徵求車標，拆換標，壓標(個人、工作室均可)</h5>
+                    <div class="client">
+                      <div class="client_pic client3"></div>
+                      <p>牧衣牛仔服飾</p>
+                    </div>
+  
+                    <p class="location"><span class="material-symbols-outlined">location_on</span>地區：新北市三重區</p>
+                    <p>更新日期：2022/10/13</p>
+    
+                    </div>
+                </a>
+              </li>
+
+            <!-- 案件四 -->
+            <li class="case">
+              <!-- 圖片 -->
+              <a href="case.html">
+                <div class="case_pic pic4">
+                  <div class="status long-term"></div>
+                  <span>長期合作</span>
+              </div>
+                <!-- 資訊 -->
+                <div class="case_info">
+                  <h5 class="font_bold " >針織布料開發設計師，紡織,化工相關背景，熟悉創新材質與針織布料，有自主開發的能力</h5>
+                  <div class="client">
+                    <div class="client_pic client4"></div>
+                    <p>芯棉纖維開發公司</p>
+                  </div>
+
+                  <p class="location"><span class="material-symbols-outlined">location_on</span>地區：台中市北屯區</p>
+                  <p>更新日期：2022/10/13</p>
+  
+                  </div>
+              </a>
+            </li>            
+
+            
+            <!-- 案件五 -->
+            <li class="case">
+              <!-- 圖片 -->
+              <a href="case.html">
+                <div class="case_pic pic5">
+                  <div class="status urgent"></div>
+                  <span>急件</span>
+              </div>
+                <!-- 資訊 -->
+                <div class="case_info">
+                  <h5 class="font_bold " >大貨車縫人員8名，拷克、縫釦，有經驗者佳，可配合加班</h5>
+                  <div class="client">
+                    <div class="client_pic client5"></div>
+                    <p>Lucy Lucy 實業</p>
+                  </div>
+
+                  <p class="location"><span class="material-symbols-outlined">location_on</span>地區：新北市蘆洲區</p>
+                  <p>更新日期：2022/10/12</p>
+  
+                  </div>
+              </a>
+            </li> 
+            
+            <!-- 案件六 -->
+            <li class="case">
+              <!-- 圖片 -->
+              <a href="case.html">
+                <div class="case_pic pic6">
+                  <div class="status general"></div>
+                  <span>一般案件</span>
+              </div>
+                <!-- 資訊 -->
+                <div class="case_info">
+                  <h5 class="font_bold " >品牌制服量身人員，具判讀尺寸能力，訂製制服，量身、修改、放縮，以案計薪，歡迎兼職</h5>
+                  <div class="client">
+                    <div class="client_pic client6"></div>
+                    <p>日新國際有限公司</p>
+                  </div>
+
+                  <p class="location"><span class="material-symbols-outlined">location_on</span>地區：新北市三重區</p>
+                  <p>更新日期：2022/10/13</p>
+  
+                  </div>
+              </a>
+            </li> 
+          </ul>
+
+          <!-- 往後 -->
+          <button id="next"><div ></div></button>
+            
+          
+        </div>
+      </section>
+
+      <!----------------- 熱門搜尋 ----------------->
+
+      <section class="index_Search main_block">
+        
+          <h3 class="font_26px"><img class="search_title_pic2" src="img/index/index_search_title_pic2.png" alt="Search">熱門搜尋
+          </h3>
+      
+        </div>
+        
+
+        <div class="index_Search_wrap">
+          <!-- 左邊 -->
+        <div class="search1" >
+          <h4 class="font_20px" data-aos="fade-in" data-aos-duration="2000" >即時提供全台豐富經驗專家，項目眾多，<br>資訊透明，安心取得報價</h4>
+          <img class="search1_img" src="img/index/case_women_w1000.png" alt="search1_img" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="1000">
+        </div>        
+        <!-- 右邊 -->
+        <div class="search2" data-aos="fade-in" data-aos-duration="2000" >
+          <ul class="item">
+
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_design.svg" alt="design">
+                <h5 class="font_bold ">服裝設計</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_patternMake.svg" alt="patternMake">
+                <h5 class="font_bold ">打版立裁</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_sample.svg" alt="sample">
+                <h5 class="font_bold ">樣本製作</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_equipment.svg" alt="equipment">
+                <h5 class="font_bold ">設備購買</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html"
+                >
+                <img src="img/index/index_Computer.svg" alt="Computer">
+                <h5 class="font_bold ">電腦放縮</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_material.svg" alt="material">
+                <h5 class="font_bold ">輔料素材</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_fabric.svg" alt="fabric">
+                <h5 class="font_bold ">織品布料</h5>
+              </a>
+            </li>
+  
+            <li class="itembox">
+              <a href="talent.html">
+                <img src="img/index/index_under-lease.svg" alt="under-lease">
+                <h5 class="font_bold ">轉讓租借</h5>
+              </a>
+            </li>
+  
+            
+          </ul>
+          <div class="search-bar-div">
+            <input class="search-bar" type="search" name="search-bar" id="search-bar" placeholder="您想要找什麼人才?"/>
+            <button ><i class="fa-solid fa-magnifying-glass"></i></button>
+            
+          </div>
+          
+       </div>
+        </div>
+        
+      </section>
+      
+      <!----------------- 需求導引 ----------------->
+      <section class="index_guide max-w_block" data-aos="fade-up" data-aos-duration="2000">
+
+        
+          <div class="guide1 guide_pic" >
+            <!-- <p>輕鬆打造完整專業經歷<br>
+              發名片、主動報價 多樣功能</p> -->
+          </div>
+          <div class="guide2">
+            <h3 class="font_26px" > <img src="img/index/index_OK.png" alt="一切ok" data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="1000"> 快速媒合</h3>
+            <h4 class="font_20px">資訊透明一目了然<br>節省您寶貴的時間</h4>
+            <a class="font_26px" id="index_join"data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1500" >即刻加入</a>
+          </div>
+          <div class="guide3 guide_pic" >
+          </div>
+    
+         
+      
+        
+      </section>
+
+      <!----------- 引用公共佈局 ---------->
+      <div id="footer"></div>
+
+
+    <!-- script---HTML引用公共佈局 -->
+    <script>
+      $(() => {
+        $("#header").load("header_footer_html/header.html");
+        $("#footer").load("header_footer_html/footer.html");
+      });
+    </script>
+
+   <script src="js/index.js"></script>
+
+   <!-- AOS -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+   <script>
+    AOS.init();
+  </script>
+   <!-- AOS end-->
+
+   <!-- slick -->
+  <!-- <script src="js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script> -->
+  <script>
+
+  </script>
+   <!-- slick end-->
+
+  </body>
+</html>

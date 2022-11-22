@@ -1,0 +1,542 @@
+@import url(reset.css);
+@import url(layout.css);
+
+/* ------------首頁--------------- */
+
+/* ----------- 首頁_banner ---------- */
+
+.index_banner {
+  background-image: url(../img/index/index_banner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  /* padding-top包含header高度; */
+  padding-top: 60px;
+  padding-bottom: 31.7%;
+  width: 100%;
+
+  position: relative;
+
+  /* outline: 1px solid red; */
+}
+
+.h2 {
+  color: var(--all_bgc);
+  position: absolute;
+  font-size: 2vw;
+  left: 120px;
+  top: 110px;
+}
+
+/* ----------- 最新案件 ---------- */
+
+/* 標題 */
+.index_case {
+  text-align: center;
+
+  /* outline: 1px solid blue; */
+}
+
+.index_case h3 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+
+  /* outline: 1px solid violet; */
+}
+
+.index_case h3 > img {
+  width: 100px;
+  position: absolute;
+  left: -100px;
+  bottom: 0;
+}
+
+.index_case h4 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.case_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 前後按鈕 */
+.case_wrap button {
+  background-color: transparent;
+  border: 0;
+}
+#previous,
+#next {
+  cursor: pointer;
+  /* outline: 1px solid black; */
+}
+
+#previous {
+  border-width: 24px 24px 24px 0;
+  border-style: solid;
+  border-color: transparent var(--light_grey) transparent transparent;
+  transition: 0.1s;
+
+  /* outline: 1px solid red; */
+}
+#previous:active {
+  border-color: transparent var(--logo_orange) transparent transparent;
+}
+#next {
+  border-width: 24px 0 24px 24px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--light_grey);
+  transition: 0.1s;
+}
+#next:active {
+  border-color: transparent transparent transparent var(--logo_orange);
+}
+
+/* 輪播區 */
+
+.slider {
+  flex-basis: 1050px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  overflow-x: scroll;
+  overflow: hidden;
+  /* 写在滚动容器元素上，可以让容器（非鼠标手势触发）的滚动变得平滑。 */
+  scroll-behavior: smooth;
+  /* 容器裡的吸附方向 | 是否強制吸附 */
+  scroll-snap-type: x mandatory;
+  /* touch：支援momentum-based scrolling，當使用者結束滑動手勢、手指離開螢幕之後，頁面滾動仍然會持續一下子，依據使用者滑動的速度及力道漸漸停止。 */
+  -webkit-overflow-scrolling: touch;
+
+  /* outline: 1px solid violet; */
+}
+
+/* 案件 */
+
+.slider .case {
+  margin: 0 25px;
+  flex-basis: 300px;
+  flex-shrink: 0;
+
+  outline: 1px solid #cccccc;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+
+  box-shadow: 0 0px 6px rgb(26 31 28 / 8%);
+
+  margin-bottom: 10px;
+}
+.slider .case a {
+  display: block;
+  height: auto;
+}
+.slider .case:hover {
+  box-shadow: 0 0px 12px rgb(26 31 28 / 20%);
+}
+
+/* 圖片  */
+.case_pic {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.pic1 {
+  background-image: url(../img/index/index_pic1.jpg);
+  background-size: cover;
+}
+.pic2 {
+  background-image: url(../img/index/index_pic2.jpg);
+  background-size: cover;
+}
+.pic3 {
+  background-image: url(../img/index/index_pic3.jpg);
+  background-size: cover;
+}
+.pic4 {
+  background-image: url(../img/index/index_pic4.jpg);
+  background-size: cover;
+}
+.pic5 {
+  background-image: url(../img/index/index_pic5.jpg);
+  background-size: cover;
+}
+.pic6 {
+  background-image: url(../img/index/index_pic6.jpg);
+  background-size: cover;
+}
+
+.case_pic .status {
+  width: 80px;
+  height: 0;
+  border-right: 10px solid transparent;
+
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.case_pic span {
+  position: absolute;
+  left: 5px;
+  bottom: 0px;
+  font-size: 14px;
+  color: #f8f8f8;
+  z-index: 3;
+}
+/* 案件狀態 */
+.urgent {
+  border-bottom: 20px solid var(--case_red);
+}
+.general {
+  border-bottom: 20px solid var(--logo_green);
+}
+.long-term {
+  border-bottom: 20px solid var(--logo_orange);
+}
+
+/* 資訊  */
+.case_info {
+  padding: 16px;
+  text-align: left;
+}
+.case_info h5 {
+  color: var(--logo_green);
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: justify;
+  height: 72px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.client_pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.client1 {
+  background-image: url(../img/index/index_client1.png);
+}
+.client2 {
+  background-image: url(../img/index/index_client2.png);
+}
+.client3 {
+  background-image: url(../img/index/index_client3.jpg);
+  background-position: center;
+}
+.client4 {
+  background-image: url(../img/index/index_client4.png);
+}
+.client5 {
+  background-image: url(../img/index/index_client5.png);
+}
+.client6 {
+  background-image: url(../img/index/index_client6.png);
+}
+
+.client p {
+  color: #000;
+  margin-left: 10px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* google fonts設定 */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.material-symbols-outlined {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.case_info .location {
+  /* 讓google fonts垂直置中 */
+  display: flex;
+  align-items: center;
+}
+
+.case_info > p,
+span {
+  color: var(--all_font);
+}
+
+/* ----------- 熱門搜尋 ---------- */
+.index_Search {
+  /* outline: 1px solid red; */
+}
+
+/* 標題*/
+
+.search_title_pic2 {
+  width: 30px;
+  display: inline-block;
+  top: 0px;
+  left: -37px;
+
+  position: absolute;
+}
+.index_Search > h3 {
+  display: inline-block;
+  margin-bottom: 5px;
+  position: relative;
+
+  /* outline: #000 1px solid; */
+}
+
+.index_Search_wrap {
+  display: flex;
+}
+
+/* -- 左邊 -- */
+.search1 {
+  padding-top: 5px;
+  width: 50%;
+
+  /* outline: 1px solid black; */
+}
+
+.search1 h4 {
+  /* 跟者h3走 */
+  padding-left: 45px;
+}
+.search1_img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* -- 右邊 -- */
+
+.search2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* outline: 1px solid red; */
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-content: space-between; */
+
+  /* outline: 1px solid red; */
+}
+.itembox {
+  width: 25%;
+  padding: 5px 20px 50px;
+  text-align: center;
+}
+.itembox img {
+  display: block;
+  width: 50%;
+  margin: 0 auto 20px;
+}
+.itembox h5 {
+  /* 為什麼沒吃到文字設定 */
+  color: var(--all_font);
+}
+
+/* 搜尋吧的樣式寫在layout */
+
+/* ----------- 需求導引 ---------- */
+.index_guide {
+  background-color: var(--index_guide_gbc);
+  margin-top: 50px;
+  position: relative;
+
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+
+  /* outline: 1px solid red; */
+}
+.index_guide::before {
+  content: "";
+  border-top: 50px solid var(--all_bgc);
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+/* 中間文字 */
+.guide2 {
+  flex-grow: 2;
+  text-align: center;
+}
+.guide2 h3 {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  display: inline-block;
+
+  position: relative;
+
+  /* background-color: yellow; */
+}
+.guide2 img {
+  position: absolute;
+  top: -57px;
+  left: -85px;
+}
+
+.guide2 h4 {
+  color: var(--header_bgc);
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px var(--all_font);
+}
+
+.guide2 a {
+  display: inline-block;
+  color: var(--header_bgc);
+  background-color: var(--logo_green);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px var(--header_bgc);
+  cursor: pointer;
+}
+#index_join:hover {
+  background-color: var(--hover_button_green);
+}
+
+.guide_pic {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-basis: 400px;
+  height: 423px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.guide1 {
+  flex-grow: 1;
+  background-image: url(../img/index/index_havePro.png);
+}
+.guide3 {
+  flex-grow: 1;
+  background-image: url(../img/index/index_haveCase.png);
+}
+.guide1 p,
+.guide3 p {
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.guide1,
+.guide2,
+.guide3 {
+  /* outline: 1px solid black; */
+}
+
+/* ----------------------------------- */
+/* -----------RWD-index-------------- */
+/* ----------------------------------- */
+
+@media screen and (max-width: 414px) {
+  /*------------ 首頁banner --------*/
+  .index_banner {
+    background-image: url(../img/index/index_banner\ -RWD.svg);
+    padding-top: 50px;
+    padding-bottom: 86%;
+    background-size: cover;
+  }
+  .h2 h2:last-child {
+    display: none;
+  }
+
+  .h2 {
+    color: var(--all_bgc);
+    position: absolute;
+    left: 30px;
+    top: 160px;
+  }
+
+  /*------------ 最新案件 --------*/
+  .index_case.main_block2 {
+    max-width: 100%;
+  }
+  .index_case h4 {
+    margin-bottom: 20px;
+  }
+  .case_wrap {
+  }
+  ul.slider {
+    flex-basis: 300px;
+  }
+  .slider .case {
+    margin: 0 10px;
+    flex-basis: 280px;
+  }
+
+  .index_case h3 > img {
+    width: 50%;
+    left: -50%;
+  }
+
+  /*------------ 熱門搜尋 --------*/
+  .index_Search.main_block {
+    max-width: 100%;
+    text-align: center;
+  }
+  .index_Search > h3 {
+    margin-bottom: 20px;
+  }
+  .index_Search h3 img {
+  }
+  .index_Search_wrap {
+    justify-content: center;
+  }
+  /* 左邊 */
+  .search1 {
+    display: none;
+  }
+  /* 右邊 */
+  .search2 {
+    width: 100%;
+  }
+  .item {
+    max-width: 100%;
+  }
+  .itembox {
+    padding: 5px 10px 30px;
+  }
+  .search-bar-div .search-bar {
+    width: 0;
+    width: 80vw;
+  }
+
+  /*------------需求導引 --------*/
+
+  .index_guide.max-w_block {
+  }
+  .guide1,
+  .guide3 {
+    display: none;
+  }
+  .guide2 img {
+    width: 70%;
+    top: -35px;
+    left: -40px;
+  }
+}

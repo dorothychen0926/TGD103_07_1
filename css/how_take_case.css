@@ -1,0 +1,605 @@
+@import url(reset.css);
+@import url(layout.css);
+
+.nav > li:nth-child(5) > a:nth-child(1) {
+  color: var(--logo_orange);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .nav > li:nth-child(5) > a:nth-child(1) {
+    color: var(--all_font);
+    font-weight: normal;
+  }
+}
+
+.top {
+  width: 100%;
+  height: 60px;
+}
+
+/* =============如何接案_開始 =============*/
+
+/* ----------- 如何接案_接案流程  ---------- */
+
+.how_to {
+  padding: 40px 0 90px;
+  text-align: center;
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    360deg,
+    #f8f8f8 0%,
+    #f8f8f8 50%,
+    #fbd3c0 100%
+  );
+}
+.how_to::after .how_to h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+
+.how_to h4 {
+  margin-bottom: 15px;
+  color: var(--logo_orange);
+}
+
+.how_to i {
+  margin-top: 50px;
+}
+
+.process {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px auto 0;
+}
+.process .step_circle_p {
+  color: var(--logo_green);
+}
+.process p {
+  display: block;
+}
+.step {
+  flex-basis: 210px;
+  text-align: center;
+
+  /* outline: 1px solid red; */
+}
+.step_circle {
+  width: 100px;
+  height: 100px;
+  /* background-color: var(--header_bgc); */
+  /* border: 2px solid var(--logo_green); */
+  border-radius: 50%;
+  color: var(--all_bgc);
+  text-align: center;
+  line-height: 100px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* outline: 1px solid red; */
+}
+.step_circle .img {
+  border-radius: 50%;
+
+  /* -webkit-filter: invert(1);
+  filter: contrast(100%); */
+  /* filter: brightness(100); */
+}
+.step p {
+  font-weight: bold;
+}
+.step .div button{
+  border: 0;
+  background-color: transparent;
+  color: var(--logo_orange);
+  cursor: pointer;
+}
+/* .step .div i{
+  margin-right: 5px;
+} */
+
+/* ----------- 如何接案_三種方案  ---------- */
+
+.program_wrapper {
+  text-align: center;
+}
+
+.program_wrapper h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+
+.program_wrapper h4 {
+  margin-bottom: 15px;
+}
+
+.Program {
+  width: 690px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid rgb(26 31 28 / 8%);
+  box-shadow: 0 0px 5px rgb(26 31 28 / 8%);
+
+  /* outline: 1px solid red; */
+  /* background-color: aquamarine; */
+}
+
+.project_box {
+  width: 190px;
+  padding: 8px 8px;
+  /* outline: 1px solid blue; */
+}
+.project_box .box2{
+  /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset; */
+}
+
+/* .Program .project_box:hover{
+  box-shadow: 0 0 0 1px #e1264a;
+  z-index: 1;
+} */
+.Program .project_box:hover {
+  box-shadow: 0 0 0 1px var(--case_red) inset;
+}
+.Program li {
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.project_box .project{
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.project_box .price{
+  padding-top: 15px;
+}
+.Program li:last-child {
+  border-bottom: none;
+}
+
+/* <!-- 第一欄 --> */
+
+.Program .title {
+  width: 120px;
+  background-color: #f9f9f9;
+}
+.Program .project_box {
+  background-color: var(--header_bgc);
+}
+
+.title li {
+  border-bottom: none;
+  line-height: 61px;
+
+  /* outline: 1px solid blue; */
+}
+.title .title_scale {
+  line-height: 25px;
+}
+.title .title_featrue {
+  line-height: 118px;
+}
+
+/* <!-- 方案 --> */
+
+.project_box p {
+  display: block;
+}
+.project .month{
+  color: var(--case_red);
+  font-weight: bold;
+  position: relative;
+}
+
+.box2 .month::before {
+  content: "";
+  width: -1px;
+  height: 60px;
+  display: inline-block;
+  background-color: var(--logo_orange);
+  border-right: 15px solid var(--logo_orange);
+  border-left: 15px solid var(--logo_orange);
+  border-bottom: 7px solid var(--header_bgc);
+
+  position: absolute;
+  top: -23px;
+  left: 6px;
+}
+
+.box2 .month::after {
+  content: "熱銷";
+  writing-mode: vertical-lr;
+  color: var(--header_bgc);
+  font-weight: lighter;
+
+  position: absolute;
+  top: -20px;
+  left: 5px;
+}
+
+.project .days {
+  /* display: none; */
+}
+
+/* <!-- 價格 --> */
+.price h2 {
+  color: var(--case_red);
+}
+.price p {
+  text-decoration: line-through;
+}
+
+/* <!-- 規模 --> */
+.scale span:first-child {
+  display: none;
+}
+.unlimited {
+  font-weight: bold;
+  color: var(--case_red);
+
+  display: inline-block;
+
+  position: relative;
+}
+
+.unlimited::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(/img/howto/crown.png);
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: -8px;
+  left: -24px;
+
+  transform: rotate(-25deg);
+}
+
+/* <!-- 功能 --> */
+.feature_box {
+  padding-left: 12.5px;
+
+  /* outline: 1px solid red; */
+}
+.feature_box .box {
+  text-align: left;
+}
+
+.feature_box i {
+  color: var(--case_red);
+}
+
+.feature_box h4 {
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* <!-- 按鈕 --> */
+.project_box li a {
+  width: 90%;
+  font-weight: bold;
+
+  color: var(--case_red);
+  background: none;
+  border: 1px solid var(--case_red);
+}
+.project_box li a:hover{
+  background-color: var(--case_red);
+  color: var(--header_bgc);
+}
+
+.project_box .ad_point {
+  color: var(--header_bgc);
+  background-color: var(--case_red);
+}
+.project_box .ad_point:hover{
+  background-color: var(--hover_button_red);
+}
+
+.project_box .box2{
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ----------- 如何接案_評價 ---------- */
+
+.feedback {
+  text-align: center;
+}
+
+.ad_bridge {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+.ad_bridge > h2 {
+  color: var(--logo_green);
+}
+
+.feedback > p {
+  color: var(--logo_orange);
+  margin-top: px;
+}
+
+.ad_bridge h3,
+h2,
+p {
+  display: inline;
+}
+
+/* 成功案例 */
+
+.positive_feedback {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.success_wrapper {
+  width: 250px;
+  box-shadow: 0 0px 5px rgb(0 0 0 / 0.2);
+}
+.success_case {
+  position: relative;
+
+  height: 375px;
+  background-size: cover;
+  padding: 16px;
+
+  /* outline: 1px solid black; */
+}
+
+.case_1 {
+  background-image: url(../img/howto/success_case1.jpg);
+}
+.case_2 {
+  background-image: url(../img/howto/success_case2.jpg);
+}
+.case_3 {
+  background-image: url(../img/howto/success_case3.jpg);
+  background-position: center;
+}
+
+.recommend {
+  width: 100%;
+  height: 125px;
+  text-align: justify;
+  position: absolute;
+  left:0;
+  bottom: 0;
+  /* transform: translate(-50%, 0); */
+  
+  background-color: rgba(255, 255, 255,.9);
+  font-size: 14px;
+  padding: 12px;
+  /* border-radius: 0 0 20px 20px; */
+}
+
+/* 案例介紹 */
+.success_talent {
+  padding: 10px;
+  background-color: var(--all_font);
+}
+
+.success_talent h4 {
+  color: var(--all_bgc);
+}
+.grade div {
+  display: inline-block;
+  color: var(--all_bgc);
+  background-color: var(--logo_orange);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+.grade i {
+  color: var(--logo_orange);
+}
+
+@media screen and (max-width: 414px){
+
+  .top {
+    width: 100%;
+    height: 50px;
+  }
+  /* ----------- 如何接案_接案流程  ---------- */
+
+  .how_to{
+    padding: 30px 0;
+  }
+  .process {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start
+    outline: 1px solid blue;
+  }  
+  .process i{
+    display: none;
+  
+  }
+  .step{
+    display: flex;
+    align-items: center;
+    flex-basis:auto;
+
+      /* outline: 1px solid blue; */
+  }
+  .step .div{
+    text-align: left;
+  }
+
+  /* -----------如何接案_三種方案 ---------- */
+
+  .program_wrapper h4{
+   margin-bottom: 40px; 
+  }
+
+  /* 包住方案的框 */
+  .Program{
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    border:none;
+    box-shadow:none;
+  }
+
+  /* 每個方案 */
+  .Program ul{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 320px;
+
+    border-radius: 7px;
+    border: 1px solid rgb(26 31 28 / 8%);
+    box-shadow: 0 0px 5px rgb(26 31 28 / 8%);
+
+    margin-bottom: 20px;
+
+    padding: 16px;
+  }
+ 
+  /* 方案與價格 */
+  .project{
+    padding: 16px 8px;
+    text-align: left;
+  }
+ 
+  .project_box li:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .project_box .project{
+    border-bottom:none;
+  }
+  .project_box .scale{
+    text-align:left;
+    padding: 5px 0;
+  }
+  .price .discount_price{
+    font-size: 28px;
+  }
+
+  /* 規模 */
+  .scale span{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .scale span:first-child {
+    display: block;
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+  }
+  .scale .unlimited::before {
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: 80px;
+  
+    transform: rotate(0deg);
+  }
+
+  /* 功能 */
+  .Program .feature{
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color:rgba(0, 0, 0, 0.1);
+  }
+  .program_wrapper .feature h4{
+    margin-bottom:5px
+  }
+
+  /* 取消列與列的分隔線 */
+  .Program  li {
+    padding: 10px 0;
+    border-bottom: none;
+  }
+  /* order調整 */
+  .project_box.box1{
+    order:2;
+  }
+  .project_box.box2{
+    order:1;
+  }
+  .project_box.box3{
+    order:3;
+  }
+
+
+  /* 第一欄 改為第二*/
+  .Program .title{
+    display: none;
+  }
+  
+  /* 第二欄 改為第一*/
+  .project_box.box2{
+    border: none;
+    box-shadow:none;
+    border: 1px solid var(--case_red);
+    /* box-shadow: 0 0px 5px rgb(237 45 63 / 8%); */
+  }
+  
+  .box2 .month::before {
+    display: none;
+  }
+  
+  .project_box.box2 .month::after {
+    content: " 熱銷中";
+    background-color: var(--logo_orange);
+    color: var(--header_bgc);
+    font-weight: lighter;
+    padding: 5px 5px;
+    border-radius: 40px;
+    writing-mode:horizontal-tb;
+    font-size: 14px;
+
+    position: absolute;
+    top: -60px;
+    left: 0px;
+  }
+
+  /* -----------如何接案_評價 ---------- */
+  .ad_bridge{
+    flex-direction: column;
+
+  }
+
+  .ad_bridge h3{
+    font-size: 24px;
+  }
+
+  .ad_bridge h2{
+    font-size: 24px;
+  }
+
+  .ad_bridge p{
+    display: none;
+  }
+
+  .positive_feedback{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .success_wrapper{
+    width: 100%;
+    max-width: 70vw;
+    margin-bottom: 30px;
+  }
+  
+
+
+
+}
+
+

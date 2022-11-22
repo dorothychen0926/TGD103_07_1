@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="css/case_publication.css" />
+    <!-- 標題icon -->
+    <link rel="icon" href="img/ico.ico" type="image/x-icon" />
+
+    <title>Partner Clothing 服裝人才媒合平台</title>
+
+    <!-- HTML引用公共佈局 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- 台灣縣市鄉鎮選擇器(tw-city-selector.js)，也需要引用上一排的jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js"></script>
+  </head>
+  <body>
+    <!----------- 引用公共佈局 ---------->
+    <div id="header"></div>
+
+    <!----------- 撐出header高度 ---------->
+    <div class="top"></div>
+
+    <!----------- 刊登進度 ---------->
+    <div class="post_wrapper main_block">
+      <section class="post_progress">
+        <p class="font_20px">刊登進度</p>
+        <div class="progress_bar_container">
+          <div class="progress_bar"></div>
+        </div>
+        <span>50%</span>
+      </section>
+
+      <!------------- 填寫內容 ---------- -->
+
+      <section class="post_content">
+        <!-- 左邊側欄 -->
+        <aside>
+          <div class="step_box">
+            <div class="step">Step1</div>
+            <p>填寫需求</p>
+          </div>
+          <div class="step_box">
+            <div class="step">Step2</div>
+            <p>聯繫資訊</p>
+          </div>
+          <div class="step_box">
+            <div class="step">Step3</div>
+            <p>完成!</p>
+          </div>
+        </aside>
+
+        <!-- 右邊表單 -->
+        <form>
+          <p>Step1 填寫需求</p>
+
+          <div class="Cooperation_wrap">
+            <label><span>*</span>合作模式</label>
+            <div class="Cooperation">
+              <div>
+                <input type="radio" name="Cooperation_status" id="urgent" />
+                <label for="urgent">急件</label>
+              </div>
+              <div>
+                <input type="radio" name="Cooperation_status" id="General" />
+                <label for="General">一般案件</label>
+              </div>
+              <div>
+                <input type="radio" name="Cooperation_status" id="Long-term" />
+                <label for="Long-term">長期合作</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="case_name_wrap">
+            <label for="case_name"><span>*</span>案件名稱</label>
+            <input
+              type="text"
+              id="case_name"
+              placeholder="例如：尋找工廠/打樣/打版..."
+              size="40"
+            />
+          </div>
+
+          <div class="case_content_wrap">
+            <label for="case_content"><span>*</span>執行內容</label>
+            <div class="div">
+              <textarea
+                name="case_content"
+                id="case_content"
+                cols="10"
+                rows="5"
+                placeholder=""
+              >
+1.案件說明：（請填寫詳細，以便人才評估報價更貼近您的需求）         
+2.注意事項：</textarea
+              >
+              <input type="file" />
+            </div>
+          </div>
+
+          <div class="deadline_wrap">
+            <label for="deadline"><span>*</span>預計完成日</label>
+            <input type="date" id="deadline" />
+          </div>
+
+          <div class="yourBudget_wrap">
+            <label for="yourBudget"><span>*</span>請問您的預算</label>
+            <select name="yourBudget" id="yourBudget">
+              <option value="">5千以下</option>
+              <option value="">5千~1萬</option>
+              <option value="">1萬~5萬</option>
+              <option value="">5萬~10萬</option>
+              <option value="">10萬~50萬</option>
+              <option value="">50萬以上</option>
+            </select>
+          </div>
+
+          <div class="Designated_place_wrap">
+            <label for="yes"><span>*</span>請問是否有指定地點</label>
+            <div class="Designated_place">
+              <div class="div">
+                <input type="radio" name="Designated_place" id="yes" />
+                <label for="yes">有</label>
+              </div>
+              <div class="div">
+                <input type="radio" name="Designated_place" id="no" />
+                <label for="no">無</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="Designated_place2_wrap">
+            <label><span>*</span>承上題，若"有"指定地點，請選擇：</label>
+            <!-- 縣市選擇器 設置一個空 element tag -->
+            <div role="tw-city-selector" class="my-style-selector" id=""></div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+
+    <div class="next_step_section main_block">
+      <button type="submit" class="next_step ad_button">下一步</button>
+    </div>
+
+    <!----------- 引用公共佈局 ---------->
+    <div id="footer"></div>
+
+    <!-- script---HTML引用公共佈局 -->
+    <script>
+      $(() => {
+        $("#header").load("header_footer_html/header.html");
+        $("#footer").load("header_footer_html/footer.html");
+      });
+    </script>
+    <!-- 縣市資料JS -->
+    <script>
+      new TwCitySelector();
+    </script>
+  </body>
+</html>
