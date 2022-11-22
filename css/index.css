@@ -351,7 +351,9 @@ span {
   /* 為什麼沒吃到文字設定 */
   color: var(--all_font);
 }
-
+.itembox:hover {
+  transform: scale(1.03);
+}
 /* 搜尋吧的樣式寫在layout */
 
 /* ----------- 需求導引 ---------- */
@@ -449,6 +451,265 @@ span {
   /* outline: 1px solid black; */
 }
 
+/* ---------- dialog 註冊開始 ---------- */
+
+/* google font style */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* Modal遮罩 */
+
+.hidden {
+  visibility: hidden;
+}
+
+.DivOverlapMask {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+
+  /* position: relative; */
+  /* margin: 0; */
+  /* padding: 0; */
+
+  background-color: rgba(102, 102, 102, 0.7);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  /* CSS 属性 visibility 显示或隐藏元素而不更改文档的布局。 */
+  /* 若将其子元素设为 visibility: visible，则该子元素依然可见 */
+  /* visibility: visible; */
+  /* visibility: hidden; */
+  /* display:none; */
+}
+
+/* 彈跳窗 */
+.regi_DivDialog {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+  z-index: 300;
+
+  background-color: var(--header_bgc);
+  padding: 20px 40px;
+  border-radius: 5px;
+
+  max-width: 400px;
+  max-height: 90vh;
+
+  /* 可設定「垂直」方向，當超出範圍時自動變成捲軸呈現方式。 */
+  overflow-y: scroll;
+}
+
+/* x按鈕 */
+.closeDialog {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+.closeDialog span {
+  margin: 0;
+  padding: 0;
+}
+.closeDialog:hover {
+  cursor: pointer;
+  background-color: rgba(204, 204, 204, 0.6);
+}
+.closeDialog:active {
+  cursor: pointer;
+  background-color: rgba(204, 204, 204, 0.9);
+}
+
+/* 表單 */
+/* logo */
+.DivDialog_logo {
+  background: url(../img/logo-vertical-02.svg) no-repeat;
+  background-position: center;
+  height: 100px;
+  width: auto;
+
+  margin-bottom: 15px;
+}
+/* 社群登入 */
+.socialAuthLinks {
+  display: flex;
+  justify-content: space-around;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+.socialAuthLinks a {
+  display: block;
+}
+.social .facebook {
+  background-color: RGB(102, 117, 185);
+}
+.social .google {
+  background-color: RGB(203, 106, 82);
+}
+
+.social_logo {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+
+  text-align: center;
+}
+.social_logo i {
+  line-height: 40px;
+  font-size: 22px;
+  color: var(--header_bgc);
+}
+
+/* 分隔線 */
+.divider {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  position: relative;
+  z-index: 0;
+}
+.divider::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--light_grey);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+.divider span {
+  padding: 0 10px;
+
+  background-color: var(--header_bgc);
+  z-index: 2;
+}
+
+/* 輸入框 */
+.inputText_wrapper {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding-right: 12px;
+  padding-left: 12px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  /* outline: 1px solid blue; */
+}
+.inputText_wrapper span {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.inputText_wrapper input {
+  flex-grow: 1;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  padding-left: 5px;
+  /* outline: 1px solid red; */
+}
+
+.inputText_wrapper:hover {
+  border: 2px solid #cccccc;
+}
+/* .inputText_wrapper:focus{
+   border:var(--logo_green);
+} */
+
+.inputText_wrapper span {
+  flex-grow: 0;
+}
+#regi_show_password {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+}
+#regi_show_password .off {
+  display: none;
+}
+/* 勾選是否訂閱 */
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.subscribe label {
+  margin-left: 5px;
+}
+
+/* --送出-- */
+.regi_DivDialog .submit {
+  border: 0;
+  width: 100%;
+  color: var(--header_bgc);
+  background-color: var(--logo_green);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  margin-bottom: 15px;
+}
+.regi_DivDialog .submit:hover {
+  background-color: var(--hover_green);
+}
+
+/* -- 表尾 -- */
+.terms a {
+  display: inline-block;
+  color: var(--logo_green);
+}
+.terms {
+  margin-bottom: 15px;
+}
+.switch_identity {
+  display: flex;
+  justify-content: center;
+}
+
+.switch_identity p {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+#switch_login {
+  display: inline-block;
+  color: var(--logo_green);
+  font-weight: bold;
+}
+#switch_login:hover {
+  text-decoration: underline;
+}
+
+/* ---------- dialog 註冊結束 ---------- */
+
 /* ----------------------------------- */
 /* -----------RWD-index-------------- */
 /* ----------------------------------- */
@@ -486,6 +747,7 @@ span {
   }
   .slider .case {
     margin: 0 10px;
+    margin-bottom: 10px;
     flex-basis: 280px;
   }
 
@@ -521,6 +783,7 @@ span {
   .itembox {
     padding: 5px 10px 30px;
   }
+
   .search-bar-div .search-bar {
     width: 0;
     width: 80vw;

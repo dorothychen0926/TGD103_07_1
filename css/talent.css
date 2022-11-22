@@ -272,7 +272,7 @@ h3.changeFilter {
   margin-bottom: 20px;
 
   /* 推左，與搜尋結果對齊 */
-  margin-left: 25px;
+  margin-left: 12px;
 }
 .breadcrumb a {
   display: inline-block;
@@ -301,7 +301,10 @@ h3.changeFilter {
   margin-bottom: 20px;
 
   /* 推左，與搜尋結果對齊 */
-  margin-left: 25px;
+  margin-left: 12px;
+}
+.talent_div .search_rwd {
+  display: none;
 }
 
 /* 筆數與排數樣式取自layout */
@@ -315,7 +318,7 @@ h3.changeFilter {
 }
 
 .portfolio {
-  flex-basis: 250px;
+  flex-basis: 280px;
   flex-shrink: 0;
   /* 為何不行 */
   overflow: hidden;
@@ -334,6 +337,10 @@ h3.changeFilter {
   z-index: 1;
   transition: 1s;
   overflow: hidden;
+}
+.portfolio_img img {
+  width: 280px;
+  object-fit: contain;
 }
 .portfolio_img a {
   /* width: 100%;
@@ -427,10 +434,11 @@ h3.changeFilter {
 .special::before {
   content: "專長：";
 }
-.special a:first-child {
-  /* 修bug用 */
+/* 修bug用 */
+/* .special a:first-child {
+  
   display: none;
-}
+} */
 .special a {
   display: inline-block;
   background-color: var(--logo_grey);
@@ -575,6 +583,10 @@ h3.changeFilter {
     width: 80vw;
     margin-bottom: 30px;
   }
+  .talent_aside .search-bar-div button {
+    top: 10px;
+    right: 30px;
+  }
 
   /* <!-- 搜尋條件 --> */
   .talent_aside .class {
@@ -609,6 +621,12 @@ h3.changeFilter {
   }
   .talent_div .number {
     padding-left: 30px;
+    padding-bottom: 20px;
+  }
+  .talent_div .search_rwd {
+    display: block;
+    padding-left: 30px;
+    padding-bottom: 10px;
   }
   .sorting {
     padding: 10px 20px;

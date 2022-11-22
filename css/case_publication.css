@@ -242,7 +242,12 @@ margin-right: 20px;
     margin-top: 5px;
     align-self: flex-start;
 }
+.case_content_wrap span{
 
+}
+.case_content_wrap input.file{
+    display: inline-block;
+}
 /* 預計完成日 */
 
 .deadline_wrap{

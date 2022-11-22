@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/how_take_case.css" />
     <!-- 標題icon -->
     <link rel="icon" href="img/ico.ico" type="image/x-icon" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Partner Clothing 服裝人才媒合平台</title>
 
@@ -148,7 +150,7 @@
           </li>
           <!-- 選擇按鈕 -->
           <li>
-            <a class="ad_button" href="#">選擇方案</a>
+            <a class="ad_button" href="###">選擇方案</a>
           </li>
         </ul>
 
@@ -194,7 +196,7 @@
           </li>
           <!-- 選擇按鈕 -->
           <li>
-            <a class="ad_button ad_point" href="#">選擇方案</a>
+            <a class="ad_button ad_point" href="###">選擇方案</a>
           </li>
         </ul>
 
@@ -239,7 +241,7 @@
           </li>
           <!-- 選擇按鈕 -->
           <li>
-            <a class="ad_button" href="#">選擇方案</a>
+            <a class="ad_button" href="###">選擇方案</a>
           </li>
         </ul>
       </article>
@@ -256,7 +258,11 @@
       <p class="font_20px">為自已的專業打造好口碑</p>
 
       <div class="positive_feedback main_block">
-        <div class="success_wrapper">
+        <div
+          class="success_wrapper"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+        >
           <div class="success_case case_1">
             <div class="recommend">
               “獨自作業，最煩腦案子從哪裡來，加入Partner
@@ -276,7 +282,12 @@
           </div>
         </div>
 
-        <div class="success_wrapper">
+        <div
+          class="success_wrapper"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+          data-aos-delay="500"
+        >
           <div class="success_case case_2">
             <div class="recommend">
               “疫情下，拜訪認識客戶的機會變少了，總是需要想辦法拓展客源，並減少庫存，加入平台，廣告效率變高了”
@@ -295,7 +306,12 @@
           </div>
         </div>
 
-        <div class="success_wrapper">
+        <div
+          class="success_wrapper"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+          data-aos-delay="1000"
+        >
           <div class="success_case case_3">
             <div class="recommend">
               “我的專業只有一樣，就是修改衣服，希望透過接不同案子來拓展自已的經驗值，Partner
@@ -327,5 +343,12 @@
         $("#footer").load("header_footer_html/footer.html");
       });
     </script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+    <!-- AOS end-->
   </body>
 </html>

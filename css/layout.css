@@ -23,7 +23,9 @@
 }
 
 /* ------------文字----------------- */
-
+.font_index_banner {
+  font-size: 2vw; /* 如banner壓字*/
+}
 .font_banner {
   font-size: 2vw; /* 如banner壓字*/
 }
@@ -1156,7 +1158,9 @@ footer a:hover {
 
 @media screen and (max-width: 414px) {
   /* ------------文字----------------- */
-
+  .font_index_banner {
+    font-size: 4vw; /* 如banner壓字*/
+  }
   .font_banner {
     font-size: 3vw; /* 如banner壓字*/
   }

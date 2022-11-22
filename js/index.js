@@ -1,3 +1,4 @@
+
 //輪播區
 //宣告
 let next = document.getElementById('next');
@@ -9,11 +10,11 @@ previous.addEventListener("click",scrollright);
 
 
 //Media Queries with JavaScript
-var x = window.matchMedia("(max-width: 414px)")
+var x = window.matchMedia("(max-width: 414px)");
 // Call listener function at run time
-scrollLeft(x) 
+scrollLeft(x);
  // Attach listener function on state changes
-x.addEventListener(scrollLeft(x))
+x.addEventListener(scrollLeft(x));
 
 
 function scrollLeft(){
@@ -55,17 +56,6 @@ function scrollright(){
 
 }
 
-// 首頁按鈕即刻加入
-const index_join  = document.getElementById("index_join");
 
-function regi_open_modal(){
-  console.log("regi_open_modal");
-  DivOverlapMask.classList.remove('hidden');
-  regi_DivDialog.classList.remove('hidden');
-  // body滾動隱藏
-  $('body').css("overflow", "hidden");
-}
-
-index_join.addEventListener("click",regi_open_modal);
 
 

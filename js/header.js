@@ -30,22 +30,23 @@ let x = document.getElementById("regi_password");
 // --------------------------------------------------
 
 // 開啟彈窗按鈕宣告
-const login = document.getElementById("login");
-const register = document.getElementById("register");
+// 開啟彈窗按鈕宣告
+let login = document.getElementById("login");
+let register = document.getElementById("register");
 // 關閉彈窗按鈕宣告
-const closeDialog = document.getElementsByClassName("closeDialog");
+let closeDialog = document.getElementsByClassName("closeDialog");
 console.log(closeDialog);
 // 轉登入按鈕宣告
-const switch_login = document.getElementById("switch_login");
+let switch_login = document.getElementById("switch_login");
 // 轉註冊按鈕宣告
-const switch_register = document.getElementById("switch_register");
+let switch_register = document.getElementById("switch_register");
 // ==顯示元素宣告
 // 遮罩
-const DivOverlapMask = document.querySelector(".DivOverlapMask")
+let DivOverlapMask = document.querySelector(".DivOverlapMask");
 //登入窗
-const login_DivDialog = document.querySelector(".login_DivDialog")
+let login_DivDialog = document.querySelector(".login_DivDialog");
 //註冊窗
-const regi_DivDialog = document.querySelector(".regi_DivDialog")
+let regi_DivDialog = document.querySelector(".regi_DivDialog");
 
 
 // 函數

@@ -96,32 +96,38 @@ $(".filter_selected").on("click","span",function(){
 }
 )
 
-
-
 // 加入收藏
 
+
+let like = document.querySelectorAll('.like');
+console.log(like);
+let heart= document.querySelectorAll('.like i');
+console.log(heart);
+
+
+
 function click_like(e){
-
+    console.log(heart[e].classList.contains("fa-solid"));
+    if(heart[e].classList.contains("fa-solid")){
     
-
-    if($('#like i').hasClass("fa-solid")){
-
-
-        $('.caseBox_feature #like').html('<i class="fa-regular fa-heart"></i>'+'加入收藏');
-     
-        $('.caseBox_feature #like').css("color","var(--all_font)");
-
+        like[e].innerHTML ='<i class="fa-regular fa-heart"></i>'+'加入收藏'
+        like[e].style.color = "var(--all_font)";
 
     }else{
-   
-        
 
-        $('.caseBox_feature #like').html('<i class="fa-solid fa-heart"></i>'+'已收藏');
-     
-        $('.caseBox_feature #like').css("color","red");
+        like[e].innerHTML ='<i class="fa-solid fa-heart"></i>'+'已收藏'
+        like[e].style.color = "var(--case_red)";
     }
-
-
-
+    
 }
 
+//發名片
+
+function click_namecard(){
+    alert('名片發送成功!');
+}
+
+
+// for(let i = 0;i<like.length;i++){
+//     like[i].style.color=""
+// }
